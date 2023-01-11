@@ -7,6 +7,9 @@ export const Navbar = () => {
 			<Link to="/">
 				<span className="navbar-brand mb-0 h1">Bienestar</span>
 			</Link>
+			<Link to="/vistausuario">
+				<span className="navbar-brand mb-0 h1">Mi Informacion</span>
+			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
 					<button className="btn btn-primary">Check the Context in action</button>
