@@ -23,15 +23,8 @@ export const Navbar = () => {
 						<a class="nav-link" href="#">Objetivos</a>
 					</li>
 				</ul>
-				<form class="d-flex" role="search">
-					<input
-						class="form-control me-2"
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
-					/>
-					<button class="btn btn-outline-success" type="submit">Search</button>
-				</form>
+				{/* login icon */}
+					<i class="fa-regular fa-circle-user"></i>
 
 			{/* <!-- Setting botton --> */}
 				<li class="nav-item dropdown">
