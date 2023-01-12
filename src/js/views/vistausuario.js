@@ -6,8 +6,8 @@ import { CentralCard, DerechaCard, DestacadosCard, FotoCard } from '../component
 
 export const VistaUsuario = (props) => {
     return (
-        <div className='row container-fluid pt-3'>
-            <div className='col-3 d-flex flex-column pt-3 pb-3 mt-5'>
+        <div className='row container-fluid pt-5 pb-3 mx-auto mt-3 mb-2'>
+            <div className='col-lg-3 col-sm-12 d-flex flex-column mt-4'>
                 <div className='mb-4'>
                     <FotoCard />
                 </div>
@@ -15,10 +15,10 @@ export const VistaUsuario = (props) => {
                     <DestacadosCard />
                 </div>
             </div>
-            <div className='col-6 d-flex justify-content-center pt-3 pb-3 mt-5' >
+            <div className='col-lg-6 col-sm-12 d-flex justify-content-center mt-4' >
                 <CentralCard />
             </div>
-            <div className='col-3 d-flex justify-content-center pt-3 pb-3 mt-5'>
+            <div className='col-lg-3 col-sm-12 d-flex justify-content-center mt-4'>
                 <DerechaCard />
             </div>
 
