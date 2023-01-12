@@ -6,3 +6,7 @@
 .alturaMin {
     min-height: 25rem;
 }
+
+.imagenPerfil {
+    max-width: 10rem;
+}
