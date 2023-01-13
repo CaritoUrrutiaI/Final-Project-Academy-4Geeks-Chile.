@@ -21,7 +21,9 @@ export const Navbar = () => {
 					<a className="nav-link navbarFontColor" href="#">Deportes</a>
 				</li>
 				<li className="nav-item">
-					<a className="nav-link navbarFontColor" href="#">Tu semana</a>
+					<Link to="/tusemana" className="text-decoration-none">
+						<a className="nav-link navbarFontColor" href="#">Tu semana</a>
+					</Link>
 				</li>
 				<li className="nav-item">
 					<a className="nav-link navbarFontColor" href="#">Objetivos</a>
