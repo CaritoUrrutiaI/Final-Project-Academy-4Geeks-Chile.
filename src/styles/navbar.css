@@ -1,0 +1,18 @@
+.navbarColor{
+    background: #C3D9C8 !important;
+    font-family: 'Pompiere', 'normal';
+    
+}
+
+.textoTamañoMediano{
+    font-size: 1.5rem;
+}
+
+.navbarFontColor{
+    color:black !important;
+    
+}
+
+.textoTamañoGrande{
+    font-size: 2rem;
+}
