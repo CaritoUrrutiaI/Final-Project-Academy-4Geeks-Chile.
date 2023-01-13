@@ -1,0 +1,38 @@
+.contenedor-principal{
+    margin-top: 50px;
+}
+
+.carta-contenedora{
+    margin: 0 auto;
+    width: 1054px;
+    height: 595px;
+    background: #C3D9C8;
+    border: 1px solid #b6cebc;
+    border-radius: 15px;  
+}
+
+.input-id{
+box-sizing: border-box;
+width: 444px;
+height: 58px;
+left: 265px;
+margin-top: -20px;
+
+background: #FFFFFF;
+border-radius: 20px;
+}
+.input-nombre{
+box-sizing: border-box;
+width: 444px;
+height: 58px;
+margin-left: 75px;
+margin-top: -20px;
+
+background: #FFFFFF;
+border-radius: 20px;
+}
+
+h3{
+    color: #000000;
+    margin-top: 10px;
+}

@@ -7,7 +7,7 @@ export const Login = ()=>{
     return ( 
     <div className="text-center">
      <div className="row">
-        <LoginForm/>
+        <LoginForm ruta="/signup"/>
      </div>
     </div>
     )
