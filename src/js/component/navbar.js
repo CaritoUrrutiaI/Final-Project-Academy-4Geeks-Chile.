@@ -8,7 +8,7 @@ export const Navbar = () => {
 		<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano ">
 			<nav className="navbar ">
 				<div className="container-fluid">
-					<Link to="/">
+					<Link to="/" className="text-decoration-none">
 						<i className="fa-solid fa-person-biking  navbarFontColor textoTamañoGrande"></i><a className="navbar-brand ps-2 navbarFontColor textoTamañoGrande" href="#">BIENESTAR</a>
 					</Link>
 				</div>
@@ -16,12 +16,6 @@ export const Navbar = () => {
 			<ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
 				<li className="nav-item">
 					<a className="nav-link active navbarFontColor" aria-current="page" href="#">Recetas</a>
-				</li>
-
-				<li className="nav-item">
-					<Link to="/vistausuario">
-						<a className="nav-link navbarFontColor" href="#">Mi Info</a>
-					</Link>
 				</li>
 				<li className="nav-item">
 					<a className="nav-link navbarFontColor" href="#">Deportes</a>
@@ -35,16 +29,17 @@ export const Navbar = () => {
 			</ul>
 			{/* login icon */}
 			<li className="navbar-nav px-1">
-				<i className="fa-regular fa-circle-user  navbarFontColor textoTamañoGrande"></i> 
-				
+				<Link to="/vistausuario" className="text-decoration-none">
+					<i className="fa-regular fa-circle-user  navbarFontColor textoTamañoGrande"></i>
+				</Link>
 			</li>
 
 			<li className="navbar-nav pe-3 ps-1">
-				<Link to="/login">
-				<a className="nav-link  navbarFontColor" href="#">Login</a>
+				<Link to="/login" className="text-decoration-none">
+					<a className="nav-link  navbarFontColor" href="#">Login</a>
 				</Link>
-				<Link to="/signup">
-				<a className="nav-link  navbarFontColor" href="#">Signup</a>
+				<Link to="/signup" className="text-decoration-none">
+					<a className="nav-link  navbarFontColor" href="#">Signup</a>
 				</Link>
 			</li>
 
