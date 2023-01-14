@@ -3,7 +3,7 @@
 */
 body {
     font-family: 'Pompiere', 'normal';
-    background-color: #f0e4cc;
+    background:  #E9E3CF;
 }
 .sidebar{
     position: absolute;
@@ -11,5 +11,4 @@ body {
     height: 838px;
     left: 0px;
     top: 94px;
-    background: #A4CAB1;
 }
