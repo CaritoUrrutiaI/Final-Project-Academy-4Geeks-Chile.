@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/forms.css";
 import {useForm} from "react-hook-form"
+import Swal from "sweetalert2"
 
 export const LoginForm = (props)=>{
 
@@ -85,7 +86,7 @@ export const SignUpForm = (props)=>{
             </div>      
                     <button type="button" className="btn btn-link text-end">¿Has olvidado tu contraseña?</button>
            <br/>
-           <button href="#" type="submit"className="btn btn-primary text-center" style={{width: '277px',height: '71px',background: '#A8BA92',opacity: 0.66,boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',borderRadius: '20px',left: '605px',top: '675px',lineHeight: '60px'}} value="Registrarse"><h3>Registrarse</h3></button>
+           <button href="#"  type="submit"className="btn btn-primary text-center" style={{width: '277px',height: '71px',background: '#A8BA92',opacity: 0.66,boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',borderRadius: '20px',left: '605px',top: '675px',lineHeight: '60px'}} value="Registrarse"><h3>Registrarse</h3></button>
            <br/>
            ¿Ya tienes cuenta?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Inicia sesion aqui</button></Link>
 
