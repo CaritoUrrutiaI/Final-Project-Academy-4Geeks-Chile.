@@ -48,31 +48,12 @@ export const Navbar = () => {
 					<a className="nav-link  navbarFontColor" href="#">Signup</a>
 				</Link>
 			</li>
-
+            {/* logout icon */}
 			<li className="navbar-nav px-3">
-				<i className="fa-solid fa-gear textoTamañoGrande"></i>
+				<Link to="/logout" className="text-decoration-none">
+				<i class="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
+				</Link>
 			</li>
-			{/*
-			*/}
-
-			{/* <!-- Setting botton --> */}
-			{/*<li className="nav-item dropdown pe-3 ps-3">
-				<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">sssss</a>
-				<ul className="dropdown-menu">
-					<li>
-						<a className="dropdown-item" href="#">Action</a>
-					</li>
-					<li>
-						<a className="dropdown-item" href="#">Another action</a>
-					</li>
-					<li>
-						<hr className="dropdown-divider" />
-					</li>
-					<li>
-						<a className="dropdown-item" href="#">Something else here</a>
-					</li>
-				</ul>
-			</li>*/}
 		</nav>
 	);
 };
