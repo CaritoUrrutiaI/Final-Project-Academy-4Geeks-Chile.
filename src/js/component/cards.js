@@ -71,3 +71,21 @@ export default function CardRecetas(){
   </div>
   </div>
 }
+
+export const SemanaCard = () => {
+    return (
+        <div className="container d-flex mt-4 justify-content-center ">
+             <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle imagenSemana" alt="Imagen Perfil" />
+            <div className="card ms-4 anchoMin cartas">
+                <div className="card-header">
+                    Titulo
+                </div>
+                <div className="card-body">
+                    <blockquote className="blockquote mb-0">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    )
+}

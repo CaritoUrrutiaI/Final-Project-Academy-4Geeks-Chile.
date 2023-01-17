@@ -5,9 +5,8 @@ import { Context } from "../store/appContext";
 export const SignUp = ()=>{
     return (
         <div className="text-center">
-            <h1>SIGN UP</h1>
         <div className="row">
-           <SignUpForm/>
+           <SignUpForm ruta="/login"/>
         </div>
        </div>
     )

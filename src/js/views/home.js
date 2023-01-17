@@ -1,45 +1,52 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import Swal from 'sweetalert2'
 
 export const Home = () => (
-	<div className="container">
+	<div className="container-fluid">
 		<div className="row">
-			{/* SideBar */}
-			<div className="col-8">
+			<div id="sidebar-container" className="col-2">
+				<div className="logo">
+					<h3>Destacados</h3>
+				</div>
+				<div className="Noticias">
+					<img src="..."/><p className= "img-fluid rounded-start d-block text-dark p-3">prueba prueba </p>
+					<img src="..."/><p className= "d-block text-dark p-3">prueba prueba </p>
+					<img src="..."/><p className= "d-block text-dark p-3">prueba prueba </p>
+					<img src="..."/><p className= "d-block text-dark p-3">prueba prueba </p>
+					<img src="..."/><p className= "d-block text-dark p-3">prueba prueba </p>
+				</div>
 			</div>
-			<div>
-			{/* Body Rigo */}
-			<div className="col-4 Body">
-				<h1>Aquí va el saludo de bienvenida</h1>
+			<div className="bienvenida col-10">
+				<h1>Ingresa a tu portal Bienestar</h1>
+				<button type="button" class="btn btn-success btn-lg">Inicia sesión <i class="fa-solid fa-circle-arrow-right"></i></button>
 				<p><img src={rigoImage} /></p>
-					<a href="#" className="btn btn-success">If you see this green button, bootstrap is working</a>
+				{/* Cards  */}
+					<div class="card-group row">
+						<div class="card">
+							<img src="..." class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title">1era Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+						<div class="card">
+							<img src="..." class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title">2da Card title</h5>
+								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+						<div class="card">
+							<img src="..." class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title">3era Card title</h5>
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+							</div>
+						</div>
+					</div>
 			</div>
-		</div>
-		</div>
-				{/* <!-- Card para información  --> */}
-		<div class="card-group">
-				<div class="card">
-					<img src="..." class="card-img-top" alt="..." />
-					<div class="card-body">
-						<h5 class="card-title">1era Card title</h5>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					</div>
-				</div>
-				<div class="card">
-					<img src="..." class="card-img-top" alt="..." />
-					<div class="card-body">
-						<h5 class="card-title">2da Card title</h5>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					</div>
-				</div>
-				<div class="card">
-					<img src="..." class="card-img-top" alt="..." />
-					<div class="card-body">
-						<h5 class="card-title">3era Card title</h5>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					</div>
-				</div>
 		</div>
 	</div>
 );

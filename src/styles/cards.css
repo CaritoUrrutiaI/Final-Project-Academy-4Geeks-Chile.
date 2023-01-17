@@ -7,6 +7,14 @@
     min-height: 25rem;
 }
 
+.anchoMin {
+    width: 50rem ;
+}
+
 .imagenPerfil {
+    max-width: 10rem;
+}
+
+.imagenSemana {
     max-width: 10rem;
 }

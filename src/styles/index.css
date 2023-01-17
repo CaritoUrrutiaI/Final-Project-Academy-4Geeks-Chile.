@@ -3,5 +3,12 @@
 */
 body {
     font-family: 'Pompiere', 'normal';
-    background: #C3D9C8;
+    background:  #E9E3CF;
+}
+.sidebar{
+    position: absolute;
+    width: 402px;
+    height: 838px;
+    left: 0px;
+    top: 94px;
 }
