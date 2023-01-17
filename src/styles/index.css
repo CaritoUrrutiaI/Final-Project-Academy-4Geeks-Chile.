@@ -20,8 +20,6 @@ body {
 
 .card-group {
     text-align: justify;
-    margin-top: 20px;
-    padding-top: 50px;
 }
 
 .card-body h5 {
@@ -54,13 +52,6 @@ body {
     border: none;
     background: #A4CAB1;
 }
-
-.fondo {
-    position: absolute;
-    width: 1040px;
-    height: 488px;
-    left: 1440px;
-    top: 97px;
-
-    background: url("https://img.freepik.com/fotos-premium/fondo-bienestar_120872-2718.jpg");
-}
+/* .carousel-inner img {
+    border-radius: 5%;
+} */

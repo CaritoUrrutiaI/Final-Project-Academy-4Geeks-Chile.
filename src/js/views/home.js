@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 export const Home = () => (
 	<div className="container-fluid">
-		<div className="row">
+		<div className="row g-0">
 			<div id="sidebar-container" className="col-3">
 				<div className="logo">
 					<h3>Noticias Destacadas</h3>
@@ -61,17 +61,21 @@ export const Home = () => (
 					</li>
 				</ul>
 			</div>
+			{/* Imagenes de deportes */}
 			<div className="bienvenida col-9">
 				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img src="https://img.freepik.com/fotos-premium/fondo-bienestar_120872-136.jpg?w=2000" class="d-block w-100" alt="..." />
+							<img src="https://www.infobae.com/new-resizer/eu3VWXuZiR4beTObV6om5XKBE7Y=/1200x900/filters:format(webp):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06103652/natacion-1920.jpg" class="d-block w-100" alt="swimming" />
 						</div>
 						<div class="carousel-item">
-							<img src="https://img.freepik.com/fotos-premium/fondo-bienestar_120872-2718.jpg" class="d-block w-100" alt="..." />
+							<img src="https://i0.wp.com/bicicletismo.com.br/wp-content/uploads/2020/12/Hypervox-Factory-2021-Foto-Pedro-Cury-Swift-Carbon-Divulgacao.jpg?fit=2500%2C1667&ssl=1" class="d-block w-100" alt="bikes" />
 						</div>
 						<div class="carousel-item">
-							<img src="https://img.freepik.com/fotos-premium/spa-zen-piedras-basalto-hojas-bambu-verde-masaje-relajacion-bienestar_68060-170.jpg" class="d-block w-100" alt="..." />
+							<img src="https://watermark.lovepik.com/photo/20211210/large/lovepik-young-friends-go-hiking-together-picture_501799774.jpg" class="d-block w-100" alt="hiking" />
+						</div>
+						<div class="carousel-item">
+							<img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/GDN4FRNVLFDEXHD6EMGD5YM3QQ.jpg" class="d-block w-100" alt="running" />
 						</div>
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -84,7 +88,7 @@ export const Home = () => (
 					</button>
 				</div>
 				{/* Cards  */}
-				<div class="card-group row">
+				<div class="card-group row g-0">
 					<div class="card">
 						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 						<div class="card-body">
