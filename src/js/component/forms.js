@@ -15,7 +15,7 @@ export const LoginForm = (props)=>{
             <div className="card-body">
                <h1 className="card-title" style={{marginBottom:"3rem"}}>Bienvenido(a) a Bienestar!</h1>
                <div className="form-group">
-                 <input type="text" className="form-control mb-5"  style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="ID o Email"/>
+                 <input type="text" className="form-control mb-5"  style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Email"/>
                </div>
                <div className="form-group">
                  <input type="text" className="form-control mb-3" style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Contraseña"/>
@@ -35,10 +35,18 @@ export const LoginForm = (props)=>{
 export const SignUpForm = (props)=>{
    
    const [dataForm,setDataForm] = useState();
-   const {register,formState:{errors},handleSubmit}= useForm();
+   const {register,formState,handleSubmit}= useForm();
    const onSubmit = (data) =>{data.preventDefault()
+      if (!formState.isValid) {
+         Swal.fire({
+           title: 'Error!',
+           text: 'Por favor complete todos los campos requeridos',
+           icon: 'error',
+           confirmButtonText: 'Aceptar'
+         });
+         return;
       console.log(data)
-        }
+        }}
    const onChangeForm = (e)=>{
       console.log(e.target.value)
       console.log(dataForm)
@@ -46,6 +54,7 @@ export const SignUpForm = (props)=>{
          [e.target.name]:e.target.value
               })
    }
+   
    /*const [isButtonDisabled, setIsButtonDisabled] = useState(true);
    const {formState,handl}= useForm();
    useEffect(()=>{
@@ -122,12 +131,17 @@ export const SignUpForm = (props)=>{
                     <button type="button" className="btn btn-link text-end">¿Has olvidado tu contraseña?</button>
            <br/>
            <button href="#" 
-           onClick={()=>Swal.fire({
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
-     })} /*onClick={(event)=>{
+           onClick={() => {
+            if (!formState.isValid) {
+               Swal.fire({
+                  title: 'Error!',
+                  text: 'Por favor complete todos los campos requeridos',
+                  icon: 'error',
+                  confirmButtonText: 'Aceptar'
+               });
+               return;
+            }
+         }}/*onClick={(event)=>{
             if(!formState.isValid){
                event.preventDefault();
                return;
