@@ -25,24 +25,30 @@ export const Home = () => (
 				{/* Cards  */}
 					<div class="card-group row">
 						<div class="card">
-							<img src="..." class="card-img-top" alt="..." />
+							<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 							<div class="card-body">
-								<h5 class="card-title">1era Card title</h5>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+								<h4 class="card-title"><b>LA RELACIÓN DE CORRECTA ALIMENTACIÓN CON EL RENDIMIENTO DEPORTIVO </b></h4>
+								<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
+								<p class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte. Siempre digo que con la nutrición deportiva no se crean «supercampeones», pero sí puede haber campeones que nunca lleguen a serlo porque no se alimentan e hidratan correctamente.</p>
+								<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
 							</div>
 						</div>
 						<div class="card">
-							<img src="..." class="card-img-top" alt="..." />
+						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 							<div class="card-body">
-								<h5 class="card-title">2da Card title</h5>
-								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+								<h4 class="card-title"><b>LA RELACIÓN DE CORRECTA ALIMENTACIÓN CON EL RENDIMIENTO DEPORTIVO </b></h4>
+								<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
+								<p class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte. Siempre digo que con la nutrición deportiva no se crean «supercampeones», pero sí puede haber campeones que nunca lleguen a serlo porque no se alimentan e hidratan correctamente.</p>
+								<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
 							</div>
 						</div>
 						<div class="card">
-							<img src="..." class="card-img-top" alt="..." />
+						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 							<div class="card-body">
-								<h5 class="card-title">3era Card title</h5>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+								<h4 class="card-title"><b>LA RELACIÓN DE CORRECTA ALIMENTACIÓN CON EL RENDIMIENTO DEPORTIVO </b></h4>
+								<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
+								<p class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte. Siempre digo que con la nutrición deportiva no se crean «supercampeones», pero sí puede haber campeones que nunca lleguen a serlo porque no se alimentan e hidratan correctamente.</p>
+								<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
 							</div>
 						</div>
 					</div>
