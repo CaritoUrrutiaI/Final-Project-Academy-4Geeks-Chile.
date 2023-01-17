@@ -14,6 +14,7 @@ import { Footer } from "./component/footer";
 import { VistaUsuario } from "./views/vistausuario";
 import { Recetas } from "./views/recetas";
 import { TuSemana } from "./views/tusemana";
+import { RecuperarContrasena } from "./views/recuperarcontrasena";
 
 
 //create your first component
@@ -35,8 +36,10 @@ const Layout = () => {
 						<Route path="/login" element={<Login />} />
 						<Route path="/signup" element={<SignUp/>}/>
 						<Route path="/recetas" element={<Recetas/>}/>
+						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
 						<Route path="*" element={<h1>Not found!</h1>} />
 						<Route path="/vistausuario" element={<VistaUsuario/>}/>
+						
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
