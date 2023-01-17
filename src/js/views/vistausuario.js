@@ -21,10 +21,6 @@ export const VistaUsuario = (props) => {
             <div className='col-lg-3 col-sm-12 d-flex justify-content-center mt-4'>
                 <DerechaCard />
             </div>
-
-
-
-
         </div>
     )
 }
