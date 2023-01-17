@@ -36,7 +36,7 @@ export const DestacadosCard = () => {
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
                 <h5 className="card-title">Destacados Usuario</h5>
-                
+
             </div>
         </div>
     )
@@ -49,7 +49,7 @@ export const DerechaCard = () => {
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
                 <h5 className="card-title">Ventana Derecha</h5>
-                
+
             </div>
         </div>
     )
@@ -57,25 +57,25 @@ export const DerechaCard = () => {
 
 }
 
-export default function CardRecetas(){
+export default function CardRecetas() {
     return <div className="cartaconimagen card m-5 w-25">
-    <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg" className="fotolocation card-img-top p-2" alt="..."/>
-    <div className="card-body">
-      <h5 className="card-title"></h5>
-      <p className="card-text"></p>
-      <p className="card-text"></p>
-      <div className='container-fluid'>
-        <a href="#" className="btn btn-primary me-5">Go somewhere</a>
-        <a href="#" className="btn btn-primary ms-3"><i class="fas fa-heart"></i></a>
-      </div>
-  </div>
-  </div>
+        <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg" className="fotolocation card-img-top p-2" alt="..." />
+        <div className="card-body">
+            <h5 className="card-title"></h5>
+            <p className="card-text"></p>
+            <p className="card-text"></p>
+            <div className='container-fluid'>
+                <a href="#" className="btn btn-primary me-5">Go somewhere</a>
+                <a href="#" className="btn btn-primary ms-3"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </div>
 }
 
 export const SemanaCard = () => {
     return (
         <div className="container d-flex mt-4 justify-content-center ">
-             <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle imagenSemana" alt="Imagen Perfil" />
+            <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle imagenSemana" alt="Imagen Perfil" />
             <div className="card ms-4 anchoMin cartas">
                 <div className="card-header">
                     Titulo

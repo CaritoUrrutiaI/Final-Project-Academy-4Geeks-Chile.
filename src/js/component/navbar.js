@@ -5,8 +5,8 @@ import '../../styles/navbar.css'
 export const Navbar = () => {
 	return (
 
-		<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano ">
-			<nav className="navbar ">
+		<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
+			<nav className="navbar ps-3">
 				<div className="container-fluid">
 					<Link to="/" className="text-decoration-none">
 						<i className="fa-solid fa-person-biking  navbarFontColor textoTamañoGrande"></i><a className="navbar-brand ps-2 navbarFontColor textoTamañoGrande" href="#">BIENESTAR</a>
