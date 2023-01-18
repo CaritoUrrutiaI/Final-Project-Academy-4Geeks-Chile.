@@ -1,13 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
+import "../../styles/footer.css"
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<div className= "RR.SS">
-		<i className="fa-regular fa-envelope"></i>     <i class="fa-brands fa-instagram"></i>     <i class="fa-brands fa-facebook"></i>     <i class="fa-brands fa-linkedin"></i>
+	<footer className="footer mt-auto py-3 text-center footerColor fixed-bottom">
+		<div className="RR.SS pb-1">
+			<i className="fa-regular fa-envelope textoTamañoGrande mx-2"></i>
+			<i class="fa-brands fa-instagram textoTamañoGrande mx-2"></i>
+			<i class="fa-brands fa-facebook textoTamañoGrande mx-2"></i>
+			<i class="fa-brands fa-linkedin textoTamañoGrande mx-2"></i>
 		</div>
-		<p>
-		<i className="fa-regular fa-copyright" />  Todos los derechos reservados by{" "}
+		<p className="p-0 m-0">
+			<i className="fa-regular fa-copyright" />  Todos los derechos reservados by{" "}
 			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
 		</p>
 	</footer>

@@ -10,8 +10,8 @@ export const LoginForm = (props)=>{
 
 
     return (
-     <div className="container text-center d-flex justify-content-center"  >
-        <div className="card mx-auto" style={{backgroundColor: " #C3D9C8",width: "44.75rem", height:"40.25rem", marginTop:"5rem"}}>
+     <div className="container text-center d-flex justify-content-center" >
+         <div className="card mx-auto" style={{backgroundColor: " #C3D9C8",width: "44.75rem", height:"40.25rem", marginTop:"5rem"}}>
 
             <div className="card-body">
                <h1 className="card-title" style={{marginBottom:"3rem"}}>Bienvenido(a) a Bienestar!</h1>
@@ -25,13 +25,13 @@ export const LoginForm = (props)=>{
                <br/>
                <a href="#" className="btn btn-primary text-center" style={{width: '277px',height: '71px',background: '#A8BA92',opacity: 0.66,boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',borderRadius: '20px',left: '605px',top: '675px',lineHeight: '60px'}}>Ingresar</a>
                <br/>
-               ¿Aun no tienes cuenta?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Registrate</button></Link>
+               ¿Aún no tienes cuenta?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Registrate</button></Link>
 
             </div>
         </div>
      </div>
     )
-}
+} 
 
 export const SignUpForm = (props)=>{
    const [pass,setPass] = useState("")

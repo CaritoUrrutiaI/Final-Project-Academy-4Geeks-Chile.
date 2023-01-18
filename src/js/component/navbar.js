@@ -5,8 +5,8 @@ import '../../styles/navbar.css'
 export const Navbar = () => {
 	return (
 
-		<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano ">
-			<nav className="navbar ">
+		<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
+			<nav className="navbar ps-3">
 				<div className="container-fluid">
 					<Link to="/" className="text-decoration-none">
 						<i className="fa-solid fa-person-biking  navbarFontColor textoTamañoGrande"></i><a className="navbar-brand ps-2 navbarFontColor textoTamañoGrande" href="#">BIENESTAR</a>
@@ -15,10 +15,14 @@ export const Navbar = () => {
 			</nav>
 			<ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
 				<li className="nav-item">
-					<a className="nav-link active navbarFontColor" aria-current="page" href="#">Recetas</a>
+					<Link to="/recetas" className="text-decoration-none">
+						<a className="nav-link active navbarFontColor" aria-current="page" href="#">Recetas</a>
+					</Link>
 				</li>
 				<li className="nav-item">
+
 					<a className="nav-link navbarFontColor" href="#">Deportes</a>
+
 				</li>
 				<li className="nav-item">
 					<Link to="/tusemana" className="text-decoration-none">
@@ -45,10 +49,11 @@ export const Navbar = () => {
 				</Link>
 			</li>
 
-
 			<li className="navbar-nav px-3">
 				<i className="fa-solid fa-gear textoTamañoGrande"></i>
 			</li>
+			{/*
+			*/}
 
 			{/* <!-- Setting botton --> */}
 			{/*<li className="nav-item dropdown pe-3 ps-3">
