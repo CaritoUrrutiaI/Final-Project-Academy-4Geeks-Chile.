@@ -46,6 +46,10 @@ body {
     height: 50px;
 }
 
+.list-group{
+    font-size: large;
+    text-align: justify;
+}
 .list-group-item {
     display: flex;
     align-items: flex-start;

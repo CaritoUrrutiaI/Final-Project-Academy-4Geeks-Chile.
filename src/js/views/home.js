@@ -21,7 +21,7 @@ export const Home = () => (
 					</li>
 					<li class="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
-						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+						<a href="https://efesalud.com/la-actividad-fisica-decisiva-para-el-equilibrio-mental-y-el-bienestar/" target="_blank" class="list-group-item list-group-item-action">Deporte y salud: la actividad física, decisiva para el equilibrio mental y el bienestar</a>
 					</li>
 					<li class="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
