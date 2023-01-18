@@ -7,7 +7,7 @@ export const Home = () => (
 	<div className="container-fluid">
 		<div className="row g-0">
 			<div id="sidebar-container" className="col-3">
-				<div className="logo">
+				<div className="noticias">
 					<h3>Noticias Destacadas</h3>
 				</div>
 				<ul class="list-group">
@@ -61,32 +61,35 @@ export const Home = () => (
 					</li>
 				</ul>
 			</div>
-			{/* Imagenes de deportes */}
+			{/* carrousel Imagenes de deportes */}
 			<div className="bienvenida col-9">
-				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="https://www.infobae.com/new-resizer/eu3VWXuZiR4beTObV6om5XKBE7Y=/1200x900/filters:format(webp):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06103652/natacion-1920.jpg" class="d-block w-100" alt="swimming" />
+				<div className="carrousel">
+					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="https://www.infobae.com/new-resizer/eu3VWXuZiR4beTObV6om5XKBE7Y=/1200x900/filters:format(webp):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06103652/natacion-1920.jpg" class="d-block w-100" alt="swimming" />
+							</div>
+							<div class="carousel-item">
+								<img src="https://i0.wp.com/bicicletismo.com.br/wp-content/uploads/2020/12/Hypervox-Factory-2021-Foto-Pedro-Cury-Swift-Carbon-Divulgacao.jpg?fit=2500%2C1667&ssl=1" class="d-block w-100" alt="bikes" />
+							</div>
+							<div class="carousel-item">
+								<img src="https://watermark.lovepik.com/photo/20211210/large/lovepik-young-friends-go-hiking-together-picture_501799774.jpg" class="d-block w-100" alt="hiking" />
+							</div>
+							<div class="carousel-item">
+								<img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/GDN4FRNVLFDEXHD6EMGD5YM3QQ.jpg" class="d-block w-100" alt="running" />
+							</div>
 						</div>
-						<div class="carousel-item">
-							<img src="https://i0.wp.com/bicicletismo.com.br/wp-content/uploads/2020/12/Hypervox-Factory-2021-Foto-Pedro-Cury-Swift-Carbon-Divulgacao.jpg?fit=2500%2C1667&ssl=1" class="d-block w-100" alt="bikes" />
-						</div>
-						<div class="carousel-item">
-							<img src="https://watermark.lovepik.com/photo/20211210/large/lovepik-young-friends-go-hiking-together-picture_501799774.jpg" class="d-block w-100" alt="hiking" />
-						</div>
-						<div class="carousel-item">
-							<img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/GDN4FRNVLFDEXHD6EMGD5YM3QQ.jpg" class="d-block w-100" alt="running" />
-						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
+				<div className="linea-azul-carrosel"></div>
 				{/* Cards  */}
 				<div class="card-group row g-0">
 					<div class="card">
