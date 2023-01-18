@@ -6,8 +6,8 @@ import { Context } from "../store/appContext";
 export const Logout = ()=>{
     return ( 
     <div className="text-center">
+        <h1>Has cerrado sesión existosamente</h1>
      <div className="row">
-        <LoginForm ruta="/logout"/>
      </div>
     </div>
     )
