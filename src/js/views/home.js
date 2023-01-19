@@ -65,16 +65,16 @@ export const Home = () => (
 					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="https://www.infobae.com/new-resizer/eu3VWXuZiR4beTObV6om5XKBE7Y=/1200x900/filters:format(webp):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06103652/natacion-1920.jpg" class="d-block w-100" alt="swimming" />
+								<img src="https://nswc.b-cdn.net/wp-content/uploads/2017/01/aquatics-25m-swimming-pool-1200x800.jpg" class="d-block w-100" alt="swimming" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://i0.wp.com/bicicletismo.com.br/wp-content/uploads/2020/12/Hypervox-Factory-2021-Foto-Pedro-Cury-Swift-Carbon-Divulgacao.jpg?fit=2500%2C1667&ssl=1" class="d-block w-100" alt="bikes" />
+								<img src="https://bike-test.com/wp-content/uploads/temp/DGG56947.jpg" class="d-block w-100" alt="bikes" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://watermark.lovepik.com/photo/20211210/large/lovepik-young-friends-go-hiking-together-picture_501799774.jpg" class="d-block w-100" alt="hiking" />
+								<img src="https://heremag-prod-app-deps-s3heremagassets-bfie27mzpk03.s3.amazonaws.com/wp-content/uploads/2020/07/15140311/holly-mandarich-Y90GKsTKxBM-unsplash-1200x800.jpg" class="d-block w-100" alt="hiking" />
 							</div>
 							<div class="carousel-item">
-								<img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/GDN4FRNVLFDEXHD6EMGD5YM3QQ.jpg" class="d-block w-100" alt="running" />
+								<img src="https://www.runtastic.com/blog/wp-content/uploads/2021/05/thumbnail_1200x800-2.jpg" class="d-block w-100" alt="running" />
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

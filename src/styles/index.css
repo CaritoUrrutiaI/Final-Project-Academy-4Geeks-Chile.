@@ -83,7 +83,6 @@ body {
   }
   .carousel-inner{
         width: 100%; /* o el valor de ancho deseado */
-        height: 300px; /* o el valor de alto deseado */
         object-fit: cover; /* para que la imagen se ajuste al tamaño */
   }
   .container-fluid{
