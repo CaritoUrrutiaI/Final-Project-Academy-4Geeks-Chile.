@@ -81,3 +81,12 @@ body {
     background: #D9D9D9;
     position: relative;
   }
+  .carousel-inner{
+        width: 100%; /* o el valor de ancho deseado */
+        height: 300px; /* o el valor de alto deseado */
+        object-fit: cover; /* para que la imagen se ajuste al tamaño */
+  }
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+  }

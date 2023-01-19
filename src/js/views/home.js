@@ -7,10 +7,8 @@ export const Home = () => (
 	<div className="container-fluid">
 		<div className="row g-0">
 			<div id="sidebar-container" className="col-3">
-				<div className="noticias">
-					<h3>Noticias Destacadas</h3>
-				</div>
 				<ul class="list-group">
+					<h3>Noticias Destacadas</h3>
 					<li class="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.elmostrador.cl/generacion-m/2022/04/04/mas-del-40-de-los-chilenos-no-practica-deportes-por-falta-de-tiempo/" target="_blank" class="list-group-item list-group-item-action">Más del 40% de los chilenos no practica deportes por falta de tiempo</a>
