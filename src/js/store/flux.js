@@ -1,8 +1,11 @@
-const getState = ({ getStore, getActions, setStore }) => {
+const getState = ({
+	getStore,
+	getActions,
+	setStore
+}) => {
 	return {
 		store: {
-			demo: [
-				{
+			demo: [{
 					title: "FIRST",
 					background: "white",
 					initial: "white"
@@ -24,6 +27,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+			signup: (username,email,name,apellido,contraseña,Rcontraseña) => {
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					username:username,
+					email: email,
+					nombre:name,
+					apellido:apellido,
+					password: contraseña,
+					Rpassword:Rcontraseña,
+
+				});
+
+				var requestOptions = {
+					method: 'POST',
+					headers: myHeaders,
+					body: raw,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/signup", requestOptions)
+					.then(response => response.text())
+					.then(result => console.log(result))
+					.catch(error => console.log('error', error));
+				
+				return true
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -36,7 +67,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 
 				//reset the global store
-				setStore({ demo: demo });
+				setStore({
+					demo: demo
+				});
 			}
 		}
 	};
