@@ -22,7 +22,7 @@ body {
     text-align: justify;
 }
 
-.card-body h5 {
+.card-body .subtitle {
     color: green;
 }
 
@@ -82,8 +82,8 @@ body {
     position: relative;
   }
   .carousel-inner{
-        width: 100%; /* o el valor de ancho deseado */
-        object-fit: cover; /* para que la imagen se ajuste al tamaño */
+        width: 100%; 
+        object-fit: cover;
   }
   .container-fluid{
     padding-left: 0px;

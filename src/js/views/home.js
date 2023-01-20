@@ -57,6 +57,38 @@ export const Home = () => (
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
 					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
+					<li class="list-group-item">
+						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
+						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" class="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
+					</li>
 				</ul>
 			</div>
 			{/* carrousel Imagenes de deportes */}
@@ -91,30 +123,30 @@ export const Home = () => (
 				{/* Cards  */}
 				<div class="card-group row g-0">
 					<div class="card">
-						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
+						<img src="http://educagratis.cl/moodle/file.php/637/nutricion-deportiva.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 						<div class="card-body">
 							<h4 class="card-title"><b> ALIMENTACIÓN Y RENDIMIENTO DEPORTIVO </b></h4>
-							<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
-							<h6 class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte.</h6>
+							<h5 className="subtitle"> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
+							<h5 class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte.</h5>
 							<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
 						</div>
 					</div>
 					<div class="card">
-						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
+						<img src="https://d51h1y0hva8v.cloudfront.net/images/default-source/art%C3%ADculos/beneficios-caminar-aire-libre.png?sfvrsn=5ff9f8f_1" class="card-img-top" alt="figura de personas haciendo deporte" />
 						<div class="card-body">
-							<h4 class="card-title"><b> ALIMENTACIÓN Y RENDIMIENTO DEPORTIVO </b></h4>
-							<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
-							<h6 class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte.</h6>
-							<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
+							<h4 class="card-title"><b>BENEFICIOS DE CAMINAR: LO QUE DEBES SABER </b></h4>
+							<h5 className="subtitle"> Quemar calorías con 30 minutos de caminata diaria?</h5>
+							<h5 class="card-text">Una de las ventajas de este tipo de actividad física es que puede ser practicada en distintos momentos… “En una ventana de trabajo, hablando en una reunión, conversando por teléfono, en el trayecto de ida o regreso de casa al trabajo, o simplemente alrededor del lugar donde vivimos, como una actividad individual, familiar o acompañado por tu perro”</h5>
+							<a href="https://www.clinicaalemana.cl/articulos/detalle/2021/beneficios-de-caminar-30-minutos-diarios" target="_blank" class="btn btn-success">Leer más información...</a>
 						</div>
 					</div>
 					<div class="card">
-						<img src="https://shilaansogain.com/wp-content/uploads/2019/10/nutricion-alimentacion-deportiva-pamplona.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
+						<img src="https://rumipamba.edu.ec/wp-content/uploads/2021/01/salud-y-deporte.jpg" class="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
 						<div class="card-body">
-							<h4 class="card-title"><b> ALIMENTACIÓN Y RENDIMIENTO DEPORTIVO </b></h4>
-							<h5> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
-							<h6 class="card-text">Mediante una correcta alimentación mejorará significativamente el rendimiento y la recuperación. Un entrenamiento acompañado de una nutrición adecuada podrá alcanzar mayores intensidades de trabajo y duración del mismo, de la misma manera que en periodos de descanso se debe adaptar la nutrición y así favorecer la supercompensación y adaptación al deporte.</h6>
-							<a href="https://www.ergodinamica.com/blog/la-importancia-de-la-nutricion-aplicada-al-deporte/" target="_blank" class="btn btn-success">Leer más información...</a>
+							<h4 class="card-title"><b> BENEFICIOS DEL DEPORTE </b></h4>
+							<h5 className="subtitle"> ¿Qué beneficios aporta el deporte para la salud?</h5>
+							<h5 class="card-text"> Está comprobado que el deporte libera endorfinas, la hormona de la felicidad. Esto significa que el ejercicio físico produce una sensación de placer que llega incluso a actuar como analgésico natural. Al mismo tiempo, se produce en nuestra mente unos beneficios dignos de mencionar.</h5>
+							<a href="https://eurofitness.com/blog-deportes/beneficios-del-deporte-para-la-salud/" target="_blank" class="btn btn-success">Leer más información...</a>
 						</div>
 					</div>
 				</div>
