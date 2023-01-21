@@ -37,7 +37,7 @@ export const SignUpForm = (props)=>{
    const [pass,setPass] = useState("")
    const [email,setEmail] = useState("")
    let navigate = useNavigate();
-   const[actions,store]=useContext(Context)
+   const{actions,store}=useContext(Context)
 
   return(
   <form onSubmit={(evento)=>{

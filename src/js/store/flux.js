@@ -27,7 +27,7 @@ const getState = ({
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			signup: (username,email,name,apellido,contraseña,Rcontraseña) => {
+			signup: (username,email,name,apellido,contraseña) => {
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
@@ -37,7 +37,6 @@ const getState = ({
 					nombre:name,
 					apellido:apellido,
 					password: contraseña,
-					Rpassword:Rcontraseña,
 
 				});
 
