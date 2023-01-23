@@ -41,11 +41,22 @@ const getState = ({
 				};
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
-					.then(response => response.text())
-					.then(result => {setStore({user:result})
+					.then(response => response.json())
+					.then(result => {
+					console.log(result)	
+					if(result.token){
+
+					
+					setStore({user:result})
+					
 						alert("ingreso completado")
 						window.location.href ="/";
-					})
+					}
+					else{
+						alert("error")
+					}}
+					
+					)
 					.catch(error => console.log('error', error));
 			},
 			signup: (username, email, name, apellido, contraseña) => {
