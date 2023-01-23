@@ -1,21 +1,18 @@
-const getState = ({
-	getStore,
-	getActions,
-	setStore
-}) => {
+const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user:{},
+			user: {},
+			recetas: [],
 			demo: [{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
+				title: "FIRST",
+				background: "white",
+				initial: "white"
+			},
+			{
+				title: "SECOND",
+				background: "white",
+				initial: "white"
+			}
 			]
 		},
 		actions: {
@@ -41,10 +38,11 @@ const getState = ({
 				};
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
-					.then(response => response.text())
-					.then(result => {setStore({user:result})
+					.then(response => response.text()) //Pedir en json() ??
+					.then(result => {
+						setStore({ user: result })
 						alert("ingreso completado")
-						window.location.href ="/";
+						window.location.href = "/";
 					})
 					.catch(error => console.log('error', error));
 			},
@@ -77,6 +75,11 @@ const getState = ({
 					.catch(error => console.log('error', error));
 
 				return true
+			},
+			recetasApi: () => {
+				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")
+					.then(response => response.json())
+					.then(data => setStore({recetas: data.meals}))
 			},
 			changeColor: (index, color) => {
 				//get the store
