@@ -55,6 +55,7 @@ body {
     align-items: flex-start;
     border: none;
     background: #A4CAB1;
+    border-bottom: 10px;
 }
 .footer{
     position: relative;
@@ -88,4 +89,13 @@ body {
   .container-fluid{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .notfound {
+    background: white;
+  }
+  .text-page {
+    align-self: center;
+  }
+  .h1 , h1 {
+    font-size: 80px;
   }
