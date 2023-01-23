@@ -6,7 +6,8 @@ export const SignUp = ()=>{
     return (
         <div className="text-center">
         <div className="row">
-           <SignUpForm ruta="/login"/>
+              <SignUpForm ruta="/login"/>
+              
         </div>
        </div>
     )

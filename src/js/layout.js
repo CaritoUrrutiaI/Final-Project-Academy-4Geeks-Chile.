@@ -7,6 +7,8 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { SignUp } from "./views/signup";
+import { Logout} from "./views/logout";
+import { NotFound} from "./views/notfound";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -34,18 +36,17 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="/tusemana" element={<TuSemana/>} />
+						<Route path="/tusemana" element={<TuSemana />} />
 						<Route path="/login" element={<Login />} />
-						<Route path="/signup" element={<SignUp/>}/>
+						<Route path="/logout" element={<Logout />} />
+						<Route path="/signup" element={<SignUp />}/>
 						<Route path="/recetas" element={<Recetas/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="/vistausuario" element={<VistaUsuario />}/>
 						<Route path="/vistausuario" element={<VistaUsuario/>}/>
 						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
-						
-
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={<NotFound />} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>
