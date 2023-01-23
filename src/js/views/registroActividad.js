@@ -1,7 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import bike from "../../img/image 11.png";
-import runing from "../../img/image 12.png";
+import running from "../../img/image 12.png";
 import hike from "../../img/image 13.png";
 import swim from "../../img/image 14.png";
 
@@ -12,16 +12,16 @@ export const RegistrarActividad=()=>{
 
     let imageSrc;
     switch(actividad) {
-        case 'bike':
+        case 'Bike':
             imageSrc = bike;
             break;
-        case 'runing':
-            imageSrc = runing;
+        case 'Running':
+            imageSrc = running;
             break;
-        case 'hike':
+        case 'Hike':
             imageSrc = hike;
             break;
-        case 'swim':
+        case 'Swim':
             imageSrc = swim;
             break;
         default:
@@ -34,7 +34,7 @@ export const RegistrarActividad=()=>{
             <h1> Registro de actividad: {actividad} </h1>
 
         
-                <img src={imageSrc} ></img>
+                <img src={imageSrc} width="200" ></img>
             
 
             <div class="mb-3">
