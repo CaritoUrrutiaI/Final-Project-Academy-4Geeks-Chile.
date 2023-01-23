@@ -7,30 +7,54 @@ import Swal from "sweetalert2"
 import {useNavigate} from "react-router-dom"
 
 export const LoginForm = (props)=>{
-
-
-    return (
-     <div className="container text-center d-flex justify-content-center" >
-         <div className="card mx-auto" style={{backgroundColor: " #C3D9C8",width: "44.75rem", height:"40.25rem", marginTop:"5rem"}}>
-
-            <div className="card-body">
-               <h1 className="card-title" style={{marginBottom:"3rem"}}>Bienvenido(a) a Bienestar!</h1>
-               <div className="form-group">
-                 <input type="text" className="form-control mb-5"  style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Email"/>
-               </div>
-               <div className="form-group">
-                 <input type="text" className="form-control mb-3" style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Contraseña"/>
-               </div >
-                <button type="button" className="btn btn-link text-end">¿Has olvidado tu contraseña?</button>
-               <br/>
-               <a href="#" className="btn btn-primary text-center" style={{width: '277px',height: '71px',background: '#A8BA92',opacity: 0.66,boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',borderRadius: '20px',left: '605px',top: '675px',lineHeight: '60px'}}>Ingresar</a>
-               <br/>
-               ¿Aún no tienes cuenta?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Registrate</button></Link>
-
-            </div>
-        </div>
-     </div>
-    )
+   let navigate = useNavigate();
+   const{actions,store}=useContext(Context)
+ return (
+   <form onSubmit={(evento)=>{
+      evento.preventDefault();
+      let Email = evento.target[0].value
+      let contraseña = evento.target[1].value
+         
+      if(Email=="" || contraseña==""){
+         Swal.fire({
+         title: 'ERROR',
+         text: 'Debes completar los datos',
+         icon: 'error',
+         confirmButtonText: 'OK'
+       })
+       
+      }
+      else{
+         actions.login(Email,contraseña);
+        /* Swal.fire({
+            title: 'FELICIDADES',
+            text: 'Inicio de sesion completado',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          })
+          navigate("/")*/
+      }
+     }}>
+        <div className="container text-center d-flex justify-content-center" >
+           <div className="card mx-auto" style={{backgroundColor: " #C3D9C8",width: "44.75rem", height:"40.25rem", marginTop:"5rem"}}>
+              <div className="card-body">
+                <h1 className="card-title" style={{marginBottom:"3rem"}}>Bienvenido(a) a Bienestar!</h1>
+                 <div className="form-group">
+                     <input type="text" className="form-control mb-5"  style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Email"/>
+                 </div>
+                  <div className="form-group">
+                    <input type="password" className="form-control mb-3" style={{width: '548px', height: '71px', background: '#FFFFFF', opacity: '0.66', borderRadius: '20px',margin:"0 auto"}} placeholder="Contraseña"/>
+                  </div >
+                  <button type="button" className="btn btn-link text-end">¿Has olvidado tu contraseña?</button>
+                   <br/>
+                  <button href="#" type="submit" className="btn btn-primary text-center" style={{width: '277px',height: '71px',background: '#A8BA92',opacity: 0.66,boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',borderRadius: '20px',left: '605px',top: '675px',lineHeight: '60px'}}>Ingresar</button>
+                  <br/>
+                  ¿Aún no tienes cuenta?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Registrate</button></Link>
+              </div>
+          </div>
+       </div>
+   </form> 
+   )
 } 
 
 export const SignUpForm = (props)=>{
@@ -64,7 +88,7 @@ export const SignUpForm = (props)=>{
          confirmButtonText: 'OK'
        })
      }
-     if(actions.register(nameUser,Email,name,apellido,contraseña,contraseñaRepetir)){
+     if(actions.signup(nameUser,Email,name,apellido,contraseña)){
       Swal.fire({
          title: 'FELICIDADES',
          text: 'El registro a sido completado',
