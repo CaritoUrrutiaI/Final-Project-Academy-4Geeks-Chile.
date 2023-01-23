@@ -17,6 +17,8 @@ import { VistaUsuario } from "./views/vistausuario";
 import { Recetas } from "./views/recetas";
 import { TuSemana } from "./views/tusemana";
 import { RecuperarContrasena } from "./views/recuperarcontrasena";
+import { Entrenamiento } from "./views/entrenamientos";
+import { RegistrarActividad } from "./views/registroActividad";
 
 
 //create your first component
@@ -42,6 +44,9 @@ const Layout = () => {
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
 						<Route path="/vistausuario" element={<VistaUsuario />}/>
 						<Route path="*" element={<NotFound />} />
+						<Route path="/vistausuario" element={<VistaUsuario/>}/>
+						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
+						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
 					</Routes>
 					<Footer />
 				</ScrollToTop>
