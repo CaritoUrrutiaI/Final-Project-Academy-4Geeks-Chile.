@@ -37,6 +37,8 @@ export const SignUpForm = (props)=>{
    const [pass,setPass] = useState("")
    const [email,setEmail] = useState("")
    let navigate = useNavigate();
+   const{actions,store}=useContext(Context)
+
   return(
   <form onSubmit={(evento)=>{
      evento.preventDefault();
@@ -62,7 +64,7 @@ export const SignUpForm = (props)=>{
          confirmButtonText: 'OK'
        })
      }
-     else{
+     if(actions.register(nameUser,Email,name,apellido,contraseña,contraseñaRepetir)){
       Swal.fire({
          title: 'FELICIDADES',
          text: 'El registro a sido completado',
@@ -71,6 +73,9 @@ export const SignUpForm = (props)=>{
        })
       navigate("/login")
      }
+     else{
+      alert("error desconocido")
+     } 
   }}>
     <div className="container contenedor-principal"  >
     <div className="card carta-contenedora" >
