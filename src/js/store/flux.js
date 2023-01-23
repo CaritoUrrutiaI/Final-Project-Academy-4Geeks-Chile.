@@ -5,6 +5,7 @@ const getState = ({
 }) => {
 	return {
 		store: {
+			user:{},
 			demo: [{
 					title: "FIRST",
 					background: "white",
@@ -22,20 +23,41 @@ const getState = ({
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			signup: (username,email,name,apellido,contraseña) => {
+			login: (email, contraseña) => {
+				const store = getStore()
 				var myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 
 				var raw = JSON.stringify({
-					username:username,
 					email: email,
-					nombre:name,
-					apellido:apellido,
+					password: contraseña
+				});
+
+				var requestOptions = {
+					method: 'POST',
+					headers: myHeaders,
+					body: raw,
+					redirect: 'follow'
+				};
+
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
+					.then(response => response.text())
+					.then(result => {setStore({user:result})
+						alert("ingreso completado")
+						window.location.href ="/";
+					})
+					.catch(error => console.log('error', error));
+			},
+			signup: (username, email, name, apellido, contraseña) => {
+				const store = getStore()
+				var myHeaders = new Headers();
+				myHeaders.append("Content-Type", "application/json");
+
+				var raw = JSON.stringify({
+					username: username,
+					email: email,
+					nombre: name,
+					apellido: apellido,
 					password: contraseña,
 
 				});
@@ -48,10 +70,12 @@ const getState = ({
 				};
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/signup", requestOptions)
-					.then(response => response.text())
-					.then(result => console.log(result))
+					.then(response => response.json())
+					.then(result => setStore({
+						email: result.email
+					}))
 					.catch(error => console.log('error', error));
-				
+
 				return true
 			},
 			changeColor: (index, color) => {
