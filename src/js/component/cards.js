@@ -1,6 +1,7 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import '../../styles/cards.css'
+import { Context } from '../store/appContext'
 
 export const CentralCard = () => {
     return (
@@ -45,11 +46,17 @@ export const DestacadosCard = () => {
 }
 
 export const DerechaCard = () => {
+    const {store, actions} = useContext(Context);
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
-                <h5 className="card-title">Ventana Derecha</h5>
-
+                <h5 className="card-title">Recetas Favoritas</h5>
+                <ul className="list-group">
+                    {store.recetasFav != '' ? store.recetasFav.map((elem, index)=>{
+                        return (<li key= {index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos"></i> </li> )
+                    }) 
+                    : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
+                </ul>
             </div>
         </div>
     )
@@ -58,16 +65,19 @@ export const DerechaCard = () => {
 }
 
 export const CardRecetas = ({ nombre, imagen, llave }) => {
+
+    const {store, actions} = useContext(Context);
     return (
         <div key={llave} className="card m-5 anchoMinRecetas cartas">
-            <img src={imagen} className="card-img-top p-2" alt="..." />
+            <img src={imagen} className="card-img-top p-1 pt-3" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{nombre}</h5>
                 <p className="card-text"></p>
                 <p className="card-text"></p>
-                <div className='container-fluid'>
-                    <p className="card-text text-center">Santiago, Chile</p>
-                    <a href="#" className="btn btn-primary ms-3"><i className="fas fa-heart"></i></a>
+                <div className='container-fluid d-flex flex-column bd-highlight'>
+                    <button className="btn btn-success ms-3 " onClick={()=>{
+                        actions.addRecetasFav(nombre)
+                    }}><i className="fas fa-heart"></i></button>
                 </div>
             </div>
         </div>

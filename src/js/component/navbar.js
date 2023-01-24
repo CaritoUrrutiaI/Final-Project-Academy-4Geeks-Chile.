@@ -20,9 +20,9 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
-
+					<Link to="/entrenamiento" className="text-decoration-none">
 						<a className="nav-link navbarFontColor" href="#">Deportes</a>
-
+						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/tusemana" className="text-decoration-none">
@@ -39,13 +39,6 @@ export const Navbar = () => {
 						<i className="fa-regular fa-circle-user  navbarFontColor textoTamañoGrande"></i>
 					</Link>
 				</li>
-
-				<li className="nav-item">
-					<Link to="/entrenamiento" className="text-decoration-none">
-					
-						<a className="nav-link navbarFontColor" href="#">Deportes</a>
-					</Link>	
-
 
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
