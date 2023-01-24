@@ -1,6 +1,6 @@
 .cartas {
     background-color: #D9D9D9;
-    color: #796666;
+    color: black;
 }
 
 .alturaMin {
@@ -21,4 +21,9 @@
 
 .imagenSemana {
     max-width: 10rem;
+}
+
+.iconos{
+    font-size: 1.5rem;
+    color:  black;
 }

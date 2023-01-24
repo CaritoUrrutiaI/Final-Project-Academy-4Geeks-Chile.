@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			user: {},
 			recetas: [],
+			recetasFav: [],
 			demo: [{
 				title: "FIRST",
 				background: "white",
@@ -80,6 +81,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")
 					.then(response => response.json())
 					.then(data => setStore({recetas: data.meals}))
+			},
+			addRecetasFav: (nombre) =>{
+				const store = getStore();
+				store.recetasFav != '' ? setStore({recetasFav:[...store.recetasFav,nombre]}) : setStore({recetasFav:[nombre]})
 			},
 			changeColor: (index, color) => {
 				//get the store
