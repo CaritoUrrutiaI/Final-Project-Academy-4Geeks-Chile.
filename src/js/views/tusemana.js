@@ -4,7 +4,7 @@ import { SemanaCard } from '../component/cards'
 
 export const TuSemana = () => {
   return (
-    <div className='container mt-5'>
+    <div className='container mt-5 mb-5'>
         
         <SemanaCard/>
         <SemanaCard/>

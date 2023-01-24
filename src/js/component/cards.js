@@ -57,19 +57,21 @@ export const DerechaCard = () => {
 
 }
 
-export default function CardRecetas() {
-    return <div className="cartaconimagen card m-5 w-25">
-        <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg" className="fotolocation card-img-top p-2" alt="..." />
-        <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text"></p>
-            <p className="card-text"></p>
-            <div className='container-fluid'>
-                <a href="#" className="btn btn-primary me-5">Go somewhere</a>
-                <a href="#" className="btn btn-primary ms-3"><i class="fas fa-heart"></i></a>
+export const CardRecetas = ({ nombre, imagen, llave }) => {
+    return (
+        <div key={llave} className="card m-5 anchoMinRecetas cartas">
+            <img src={imagen} className="card-img-top p-2" alt="..." />
+            <div className="card-body">
+                <h5 className="card-title">{nombre}</h5>
+                <p className="card-text"></p>
+                <p className="card-text"></p>
+                <div className='container-fluid'>
+                    <p className="card-text text-center">Santiago, Chile</p>
+                    <a href="#" className="btn btn-primary ms-3"><i className="fas fa-heart"></i></a>
+                </div>
             </div>
         </div>
-    </div>
+    )
 }
 
 export const SemanaCard = () => {

@@ -41,7 +41,6 @@ export const RegistrarActividad=()=>{
             
                 <div className="col-6">
 
-
                     <div class="mb-3">
                          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Distancia Km/H"/>
                     </div>
