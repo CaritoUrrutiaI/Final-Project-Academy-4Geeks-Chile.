@@ -20,9 +20,9 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li className="nav-item">
-
+					<Link to="/entrenamiento" className="text-decoration-none">
 						<a className="nav-link navbarFontColor" href="#">Deportes</a>
-
+						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/tusemana" className="text-decoration-none">
@@ -51,11 +51,11 @@ export const Navbar = () => {
 				{/* logout icon */}
 				<li className="navbar-nav px-3">
 					<Link to="/logout" className="text-decoration-none">
-						<i class="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
+						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
 					</Link>
 				</li>
 			</nav>
-			<div class="linea-azul-navbar"></div>
+			<div className="linea-azul-navbar"></div>
 		</div>
 	);
 };

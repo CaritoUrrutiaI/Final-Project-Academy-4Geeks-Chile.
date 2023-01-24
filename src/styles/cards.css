@@ -1,6 +1,6 @@
 .cartas {
     background-color: #D9D9D9;
-    color: #796666;
+    color: black;
 }
 
 .alturaMin {
@@ -11,10 +11,23 @@
     width: 50rem ;
 }
 
+.anchoMinRecetas {
+    width: 30rem ;
+}
+
 .imagenPerfil {
     max-width: 10rem;
 }
 
 .imagenSemana {
     max-width: 10rem;
+}
+
+.iconos{
+    font-size: 1.5rem;
+    color:  black;
+}
+
+.iconoPointer{
+    cursor: pointer;
 }

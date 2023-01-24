@@ -1,6 +1,7 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import '../../styles/cards.css'
+import { Context } from '../store/appContext'
 
 export const CentralCard = () => {
     return (
@@ -45,11 +46,19 @@ export const DestacadosCard = () => {
 }
 
 export const DerechaCard = () => {
+    const {store, actions} = useContext(Context);
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
-                <h5 className="card-title">Ventana Derecha</h5>
-
+                <h5 className="card-title">Recetas Favoritas</h5>
+                <ul className="list-group">
+                    {store.recetasFav != '' ? store.recetasFav.map((elem, index)=>{
+                        return (<li key= {index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={()=>{
+                            actions.deleteRecetasFav(elem)
+                        }}></i> </li> )
+                    }) 
+                    : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
+                </ul>
             </div>
         </div>
     )
@@ -57,19 +66,24 @@ export const DerechaCard = () => {
 
 }
 
-export default function CardRecetas() {
-    return <div className="cartaconimagen card m-5 w-25">
-        <img src="https://www.cocinacaserayfacil.net/wp-content/uploads/2020/04/Recetas-de-comidas-para-ni%C3%B1os.jpg" className="fotolocation card-img-top p-2" alt="..." />
-        <div className="card-body">
-            <h5 className="card-title"></h5>
-            <p className="card-text"></p>
-            <p className="card-text"></p>
-            <div className='container-fluid'>
-                <a href="#" className="btn btn-primary me-5">Go somewhere</a>
-                <a href="#" className="btn btn-primary ms-3"><i class="fas fa-heart"></i></a>
+export const CardRecetas = ({ nombre, imagen, llave }) => {
+
+    const {store, actions} = useContext(Context);
+    return (
+        <div key={llave} className="card m-5 anchoMinRecetas cartas">
+            <img src={imagen} className="card-img-top p-1 pt-3" alt="..." />
+            <div className="card-body">
+                <h5 className="card-title">{nombre}</h5>
+                <p className="card-text"></p>
+                <p className="card-text"></p>
+                <div className='container-fluid d-flex flex-column bd-highlight'>
+                    <button className="btn btn-success ms-3 " onClick={()=>{
+                         actions.addRecetasFav(nombre)
+                    }}><i className="fas fa-heart"></i></button>
+                </div>
             </div>
         </div>
-    </div>
+    )
 }
 
 export const SemanaCard = () => {

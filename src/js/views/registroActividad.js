@@ -4,7 +4,7 @@ import bike from "../../img/image 11.png";
 import running from "../../img/image 12.png";
 import hike from "../../img/image 13.png";
 import swim from "../../img/image 14.png";
-
+import "../../styles/entrenamientos.css"
 
 
 export const RegistrarActividad=()=>{
@@ -33,17 +33,31 @@ export const RegistrarActividad=()=>{
         <div className="text-center">
             <h1> Registro de actividad: {actividad} </h1>
 
-        
-                <img src={imageSrc} width="200" ></img>
-            
+            <div className="row container-fluid">
 
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div className="col-3">
+                 <img src={imageSrc} width="200" className="vista"></img>
+                </div> 
+            
+                <div className="col-6">
+
+                    <div class="mb-3">
+                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Distancia Km/H"/>
+                    </div>
+                
+                    <div class="mb-3">
+                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Tiempo"/>
+                    </div>   
+                    
+                    <div class="mb-3">
+                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Emocion"/>
+                    </div>
+                
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-success" type="button">Ingresar</button>
+  
+</div>
             </div>
 
         </div>
