@@ -51,7 +51,27 @@ export const RegistrarActividad=()=>{
                     </div>   
                     
                     <div class="mb-3">
-                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Emocion"/>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                            <label class="form-check-label textoTamañoGrande" for="inlineRadio1">	&#128526;</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">&#128578;</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">	&#128558;&#8205;&#128168;</label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">&#129326;</label>
+                        </div>
+   
                     </div>
                 
                 </div>

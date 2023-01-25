@@ -13,7 +13,7 @@ export const Entrenamiento=()=>{
             <div className="row">
                 <div className="col-3">
                     <Link to="/registroActividad/Bike">
-                        <img src={bike} width="200" className=""></img>
+                        <img src={bike} width="200" ></img>
                     </Link>
                 </div>
                 <div className="col-3">
