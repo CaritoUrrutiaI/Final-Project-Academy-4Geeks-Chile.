@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			user: [],
 			recetas: [],
 			recetasFav: [],
+			todo: [],
 			demo: [{
 				title: "FIRST",
 				background: "white",
@@ -97,9 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addRecetasFav: (nombre) => {
 				const store = getStore();
 				store.recetasFav != '' ?
-					setStore({
-						recetasFav: [...store.recetasFav, nombre]
-					})
+					setStore({recetasFav: [...store.recetasFav, nombre]})
 					: setStore({ recetasFav: [nombre] })
 			},
 
@@ -111,7 +110,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 			},
-
+			addTodo: (registro) =>{
+				const store = getStore();
+				store.todo != '' ?
+				setStore({todo: [...store.todo, registro]})
+				: setStore({todo: [registro]})
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

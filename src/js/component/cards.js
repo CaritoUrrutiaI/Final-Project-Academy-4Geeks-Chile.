@@ -34,11 +34,24 @@ export const FotoCard = () => {
 
 
 export const DestacadosCard = () => {
+    const { store, actions } = useContext(Context);
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
-                <h5 className="card-title">Destacados Usuario</h5>
-
+                <h5 className="card-title">Tareas por hacer</h5>
+                <form className='container-fluid d-flex justify-content-between mb-2' onSubmit={(e) => {
+                    event.preventDefault();
+                    console.log(e.target[0].value);
+                    actions.addTodo(e.target[0].value);
+                }}>
+                    <input type="text" className="form-control" /> <button type='submit' className='btn ms-2'>🔎</button>
+                </form>
+                <ul className="list-group">
+                    {store.todo != '' ? store.todo.map((elem, index)=>{
+                        return <li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1">{elem} <i className="fas fa-eraser iconos iconoPointer"></i></li>})
+                        : null
+                }
+                </ul>
             </div>
         </div>
     )
@@ -53,12 +66,12 @@ export const DerechaCard = () => {
             <div className="card-body text-center">
                 <h5 className="card-title">Recetas Favoritas</h5>
                 <ul className="list-group">
-                    {store.recetasFav != '' ? store.recetasFav.map((elem, index)=>{
-                        return (<li key= {index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={()=>{
+                    {store.recetasFav != '' ? store.recetasFav.map((elem, index) => {
+                        return (<li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={() => {
                             actions.deleteRecetasFav(elem)
-                        }}></i> </li> )
-                    }) 
-                    : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
+                        }}></i> </li>)
+                    })
+                        : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
                 </ul>
             </div>
         </div>
@@ -78,8 +91,8 @@ export const CardRecetas = ({ nombre, imagen, llave }) => {
                 <p className="card-text"></p>
                 <p className="card-text"></p>
                 <div className='container-fluid d-flex flex-column bd-highlight'>
-                    <button className="btn btn-success ms-3 " onClick={()=>{
-                         actions.addRecetasFav(nombre)
+                    <button className="btn btn-success ms-3 " onClick={() => {
+                        actions.addRecetasFav(nombre)
                     }}><i className="fas fa-heart"></i></button>
                 </div>
             </div>
