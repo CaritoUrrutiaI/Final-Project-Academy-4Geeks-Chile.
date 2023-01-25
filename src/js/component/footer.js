@@ -7,7 +7,7 @@ export const Footer = () => (
 		<div className="linea-azul-footer"></div>
 		<footer className="footer py-3 text-center footerColor ">
 			<div className="RR.SS pb-1">
-				<i className="fa-regular fa-envelope textoTamañoGrande mx-2"></i>
+				<i className="fa-regular fa-envelope textoTamañoGrande mx-2" href="https://www.instagram.com/"></i>
 				<i className="fa-brands fa-instagram textoTamañoGrande mx-2"></i>
 				<i className="fa-brands fa-facebook textoTamañoGrande mx-2"></i>
 				<i className="fa-brands fa-linkedin textoTamañoGrande mx-2"></i>

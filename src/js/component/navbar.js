@@ -29,9 +29,6 @@ export const Navbar = () => {
 							<a className="nav-link navbarFontColor" href="#">Tu semana</a>
 						</Link>
 					</li>
-					<li className="nav-item">
-						<a className="nav-link navbarFontColor" href="#">Objetivos</a>
-					</li>
 				</ul>
 				{/* login icon */}
 				<li className="navbar-nav px-1">
