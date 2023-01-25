@@ -17,13 +17,14 @@ export const CentralCard = () => {
 }
 
 export const FotoCard = () => {
+    const { store, actions } = useContext(Context);
     return (
 
         <div className="card w-100 cartas" >
             <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle mx-auto position-absolute top-0 start-50 translate-middle imagenPerfil" alt="Imagen Perfil" />
             <div className="card-body pt-5 mt-5">
-                <h5 className="card-title text-center">Nombre Usuario</h5>
-                <p className="card-text text-center">Santiago, Chile</p>
+                <h5 className="card-title text-center">{store.user != '' ? store.user.username : "Nombre de Usuario"}</h5>
+                <p className="card-text text-center">{store.user != '' ? store.user.email : "Email"}</p>
             </div>
         </div>
 
@@ -46,16 +47,16 @@ export const DestacadosCard = () => {
 }
 
 export const DerechaCard = () => {
-    const {store, actions} = useContext(Context);
+    const { store, actions } = useContext(Context);
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
                 <h5 className="card-title">Recetas Favoritas</h5>
                 <ul className="list-group">
-                    {store.recetasFav != '' ? store.recetasFav.map((elem, index)=>{
-                        return (<li key= {index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos"></i> </li> )
-                    }) 
-                    : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
+                    {store.recetasFav != '' ? store.recetasFav.map((elem, index) => {
+                        return (<li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos"></i> </li>)
+                    })
+                        : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
                 </ul>
             </div>
         </div>
@@ -66,7 +67,7 @@ export const DerechaCard = () => {
 
 export const CardRecetas = ({ nombre, imagen, llave }) => {
 
-    const {store, actions} = useContext(Context);
+    const { store, actions } = useContext(Context);
     return (
         <div key={llave} className="card m-5 anchoMinRecetas cartas">
             <img src={imagen} className="card-img-top p-1 pt-3" alt="..." />
@@ -75,7 +76,7 @@ export const CardRecetas = ({ nombre, imagen, llave }) => {
                 <p className="card-text"></p>
                 <p className="card-text"></p>
                 <div className='container-fluid d-flex flex-column bd-highlight'>
-                    <button className="btn btn-success ms-3 " onClick={()=>{
+                    <button className="btn btn-success ms-3 " onClick={() => {
                         actions.addRecetasFav(nombre)
                     }}><i className="fas fa-heart"></i></button>
                 </div>

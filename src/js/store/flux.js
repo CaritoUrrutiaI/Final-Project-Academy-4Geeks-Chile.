@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: {},
+			user: [],
 			recetas: [],
 			recetasFav: [],
 			demo: [{
@@ -86,6 +86,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				store.recetasFav != '' ? setStore({recetasFav:[...store.recetasFav,nombre]}) : setStore({recetasFav:[nombre]})
 			},
+			buscadorRecetas: (solicitud)=>{
+				const store = getStore();
+				
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
