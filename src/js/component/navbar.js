@@ -37,6 +37,7 @@ export const Navbar = () => {
 					</Link>
 				</li>
 
+
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
 						<a className="nav-link  navbarFontColor" href="#">Login</a>
