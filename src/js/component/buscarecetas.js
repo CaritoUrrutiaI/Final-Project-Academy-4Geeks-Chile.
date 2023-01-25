@@ -1,9 +1,9 @@
-import React, { useContext} from "react";
-import { Context } from "../store/appContext";
+import React from "react";
+
 
 
 export const BuscadorRecetas = () => {
-    const { store, actions } = useContext(Context);
+  
 	return (<div className="container text-center">
                 <form>
                     <div className="form-group my-5">

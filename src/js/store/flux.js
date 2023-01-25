@@ -103,10 +103,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					: setStore({ recetasFav: [nombre] })
 			},
 
-			buscadorRecetas: (solicitud) => {
-				const store = getStore();
-			},
-
 			deleteRecetasFav: (nombre) => {
 				const store = getStore();
 				setStore({
