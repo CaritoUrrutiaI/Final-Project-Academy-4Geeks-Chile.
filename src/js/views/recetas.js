@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext} from "react";
 import { BuscadorRecetas } from "../component/buscarecetas";
 import { CardRecetas } from "../component/cards";
 import { Context } from "../store/appContext";

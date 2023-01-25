@@ -53,10 +53,12 @@ export const DerechaCard = () => {
             <div className="card-body text-center">
                 <h5 className="card-title">Recetas Favoritas</h5>
                 <ul className="list-group">
-                    {store.recetasFav != '' ? store.recetasFav.map((elem, index) => {
-                        return (<li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos"></i> </li>)
-                    })
-                        : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
+                    {store.recetasFav != '' ? store.recetasFav.map((elem, index)=>{
+                        return (<li key= {index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={()=>{
+                            actions.deleteRecetasFav(elem)
+                        }}></i> </li> )
+                    }) 
+                    : <li className="list-group-item list-group-item-info">Sin favoritos</li>}
                 </ul>
             </div>
         </div>
@@ -76,8 +78,8 @@ export const CardRecetas = ({ nombre, imagen, llave }) => {
                 <p className="card-text"></p>
                 <p className="card-text"></p>
                 <div className='container-fluid d-flex flex-column bd-highlight'>
-                    <button className="btn btn-success ms-3 " onClick={() => {
-                        actions.addRecetasFav(nombre)
+                    <button className="btn btn-success ms-3 " onClick={()=>{
+                         actions.addRecetasFav(nombre)
                     }}><i className="fas fa-heart"></i></button>
                 </div>
             </div>

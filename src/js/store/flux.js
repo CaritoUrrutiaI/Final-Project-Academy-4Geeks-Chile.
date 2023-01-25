@@ -39,12 +39,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 				};
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
-					.then(response => response.text()) //Pedir en json() ??
+					.then(response => response.json())
 					.then(result => {
-						setStore({ user: result })
-						alert("ingreso completado")
-						window.location.href = "/";
-					})
+						console.log(result)
+						if (result.token) {
+
+
+							setStore({ user: result })
+
+							alert("ingreso completado")
+							window.location.href = "/";
+						}
+						else {
+							alert("error")
+						}
+					}
+
+					)
+
 					.catch(error => console.log('error', error));
 			},
 			signup: (username, email, name, apellido, contraseña) => {
@@ -80,15 +92,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 			recetasApi: () => {
 				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")
 					.then(response => response.json())
-					.then(data => setStore({recetas: data.meals}))
+					.then(data => setStore({ recetas: data.meals }))
 			},
-			addRecetasFav: (nombre) =>{
+			addRecetasFav: (nombre) => {
 				const store = getStore();
-				store.recetasFav != '' ? setStore({recetasFav:[...store.recetasFav,nombre]}) : setStore({recetasFav:[nombre]})
+				store.recetasFav != '' ?
+					setStore({
+						recetasFav: [...store.recetasFav, nombre]
+					})
+					: setStore({ recetasFav: [nombre] })
 			},
-			buscadorRecetas: (solicitud)=>{
+
+			buscadorRecetas: (solicitud) => {
 				const store = getStore();
-				
+			},
+
+			deleteRecetasFav: (nombre) => {
+				const store = getStore();
+				setStore({
+					recetasFav: store.recetasFav.filter((nom) => {
+						return nom != nombre
+					})
+				})
 			},
 
 			changeColor: (index, color) => {
