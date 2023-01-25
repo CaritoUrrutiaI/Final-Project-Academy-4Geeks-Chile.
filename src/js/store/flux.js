@@ -1,21 +1,20 @@
-const getState = ({
-	getStore,
-	getActions,
-	setStore
-}) => {
+const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user:{},
+			user: [],
+			recetas: [],
+			recetasFav: [],
+			todo: [],
 			demo: [{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
+				title: "FIRST",
+				background: "white",
+				initial: "white"
+			},
+			{
+				title: "SECOND",
+				background: "white",
+				initial: "white"
+			}
 			]
 		},
 		actions: {
@@ -41,11 +40,24 @@ const getState = ({
 				};
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
-					.then(response => response.text())
-					.then(result => {setStore({user:result})
-						alert("ingreso completado")
-						window.location.href ="/";
-					})
+					.then(response => response.json())
+					.then(result => {
+						console.log(result)
+						if (result.token) {
+
+
+							setStore({ user: result })
+
+							alert("ingreso completado")
+							window.location.href = "/";
+						}
+						else {
+							alert("error")
+						}
+					}
+
+					)
+
 					.catch(error => console.log('error', error));
 			},
 			signup: (username, email, name, apellido, contraseña) => {
@@ -77,6 +89,32 @@ const getState = ({
 					.catch(error => console.log('error', error));
 
 				return true
+			},
+			recetasApi: () => {
+				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")
+					.then(response => response.json())
+					.then(data => setStore({ recetas: data.meals }))
+			},
+			addRecetasFav: (nombre) => {
+				const store = getStore();
+				store.recetasFav != '' ?
+					setStore({recetasFav: [...store.recetasFav, nombre]})
+					: setStore({ recetasFav: [nombre] })
+			},
+
+			deleteRecetasFav: (nombre) => {
+				const store = getStore();
+				setStore({
+					recetasFav: store.recetasFav.filter((nom) => {
+						return nom != nombre
+					})
+				})
+			},
+			addTodo: (registro) =>{
+				const store = getStore();
+				store.todo != '' ?
+				setStore({todo: [...store.todo, registro]})
+				: setStore({todo: [registro]})
 			},
 			changeColor: (index, color) => {
 				//get the store

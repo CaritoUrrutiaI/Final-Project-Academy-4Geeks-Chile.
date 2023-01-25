@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { BuscadorRecetas } from "../component/buscarecetas";
-import CardRecetas from "../component/cards";
+import { CardRecetas } from "../component/cards";
+import { Context } from "../store/appContext";
 
 
 
 
-export const Recetas = () => (
-    <div className="container text-center">
-        <h1 className="my-5">Recetas</h1>
-        <BuscadorRecetas/>
+export const Recetas = () => {
+    const { store, actions } = useContext(Context)
 
-        <div className="d-flex align-items-center m-1">
-            <CardRecetas/>
-            <CardRecetas/>
-            <CardRecetas/>
-            
+    return (
+        <div className="container text-center mb-5 mx-auto">
+            <h1 className="my-5">Recetas</h1>
+            <BuscadorRecetas />
+            <div className="container-fluid d-flex justify-content-center row ">
+                {store.recetas.map((elem, index) => {
+                    return <CardRecetas nombre={elem.strMeal} imagen={elem.strMealThumb} key={index} />
+
+                })}
+            </div>
+
+
         </div>
 
-    </div>
-    
 
 
-);
+    )
+};

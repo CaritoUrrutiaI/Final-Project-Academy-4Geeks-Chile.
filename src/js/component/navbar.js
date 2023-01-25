@@ -29,9 +29,6 @@ export const Navbar = () => {
 							<a className="nav-link navbarFontColor" href="#">Tu semana</a>
 						</Link>
 					</li>
-					<li className="nav-item">
-						<a className="nav-link navbarFontColor" href="#">Objetivos</a>
-					</li>
 				</ul>
 				{/* login icon */}
 				<li className="navbar-nav px-1">
@@ -39,8 +36,6 @@ export const Navbar = () => {
 						<i className="fa-regular fa-circle-user  navbarFontColor textoTamañoGrande"></i>
 					</Link>
 				</li>
-
-
 
 
 				<li className="navbar-nav pe-3 ps-1">
@@ -54,11 +49,11 @@ export const Navbar = () => {
 				{/* logout icon */}
 				<li className="navbar-nav px-3">
 					<Link to="/logout" className="text-decoration-none">
-						<i class="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
+						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
 					</Link>
 				</li>
 			</nav>
-			<div class="linea-azul-navbar"></div>
+			<div className="linea-azul-navbar"></div>
 		</div>
 	);
 };
