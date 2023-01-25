@@ -1,9 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: {},
+			user: [],
 			recetas: [],
 			recetasFav: [],
+			todo: [],
 			demo: [{
 				title: "FIRST",
 				background: "white",
@@ -41,19 +42,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
 					.then(response => response.json())
 					.then(result => {
-					console.log(result)	
-					if(result.token){
+						console.log(result)
+						if (result.token) {
 
-					
-					setStore({user:result})
-					
-						alert("ingreso completado")
-						window.location.href ="/";
+
+							setStore({ user: result })
+
+							alert("ingreso completado")
+							window.location.href = "/";
+						}
+						else {
+							alert("error")
+						}
 					}
-					else{
-						alert("error")
-					}}
-					
+
 					)
 
 					.catch(error => console.log('error', error));
@@ -96,11 +98,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addRecetasFav: (nombre) => {
 				const store = getStore();
 				store.recetasFav != '' ?
-					setStore({
-						recetasFav: [...store.recetasFav, nombre]
-					})
+					setStore({recetasFav: [...store.recetasFav, nombre]})
 					: setStore({ recetasFav: [nombre] })
 			},
+
 			deleteRecetasFav: (nombre) => {
 				const store = getStore();
 				setStore({
@@ -109,7 +110,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 			},
-
+			addTodo: (registro) =>{
+				const store = getStore();
+				store.todo != '' ?
+				setStore({todo: [...store.todo, registro]})
+				: setStore({todo: [registro]})
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
