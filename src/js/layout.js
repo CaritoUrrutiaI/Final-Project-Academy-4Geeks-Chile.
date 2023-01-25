@@ -10,7 +10,7 @@ import { SignUp } from "./views/signup";
 import { Logout} from "./views/logout";
 import { NotFound} from "./views/notfound";
 import injectContext from "./store/appContext";
-
+import { PrivateRoute } from "./component/privaterouter";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { VistaUsuario } from "./views/vistausuario";
@@ -43,7 +43,6 @@ const Layout = () => {
 						<Route path="/recetas" element={<Recetas/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
 						<Route path="/vistausuario" element={<VistaUsuario />}/>
-						<Route path="/vistausuario" element={<VistaUsuario/>}/>
 						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
 						<Route path="*" element={<NotFound />} />
