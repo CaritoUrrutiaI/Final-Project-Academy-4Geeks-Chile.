@@ -29,9 +29,6 @@ export const Navbar = () => {
 							<a className="nav-link navbarFontColor" href="#">Tu semana</a>
 						</Link>
 					</li>
-					<li className="nav-item">
-						<a className="nav-link navbarFontColor" href="#">Objetivos</a>
-					</li>
 				</ul>
 				{/* login icon */}
 				<li className="navbar-nav px-1">
@@ -39,6 +36,7 @@ export const Navbar = () => {
 						<i className="fa-regular fa-circle-user  navbarFontColor textoTamañoGrande"></i>
 					</Link>
 				</li>
+
 
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
