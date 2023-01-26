@@ -1,7 +1,8 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: [],
+			email:'',
+			user: {},
 			recetas: [],
 			recetasFav: [],
 			todo: [],
@@ -39,9 +40,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/user", requestOptions)
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/user", requestOptions)
 					.then(response => response.json())
 					.then(result => {
+					console.log(result)	
+					if(result.token){
+
+					
+					setStore({user:result})
+					
+						alert("ingreso completado")
+						window.location.href ="/vistausuario";
+
 						console.log(result)
 						if (result.token) {
 
@@ -53,8 +63,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 						else {
 							alert("error")
-						}
-					}
+						}}
 
 					)
 
@@ -81,14 +90,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us83.gitpod.io/signup", requestOptions)
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions) 
 					.then(response => response.json())
-					.then(result => setStore({
+					.then(result =>{
+						if(result.email){
+							console.log("result")
+							setStore({email:result.email})
+							
+						}
+						else{
+							alert("error")
+						}
+					})
+					/*.then(result => setStore({
 						email: result.email
-					}))
-					.catch(error => console.log('error', error));
+					}))*/
+					.catch(error => alert(error));
 
-				return true
 			},
 			recetasApi: () => {
 				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")

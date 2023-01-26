@@ -88,19 +88,22 @@ export const SignUpForm = (props)=>{
          confirmButtonText: 'OK'
        })
      }
-     if(actions.signup(nameUser,Email,name,apellido,contraseña)){
-      Swal.fire({
+    else{
+      actions.signup(nameUser,Email,name,apellido,contraseña)
+      alert("Espere un momento... 2 segundos")
+      setTimeout(()=>{
+         if(store.email!=''){
+         Swal.fire({
          title: 'FELICIDADES',
          text: 'El registro a sido completado',
          icon: 'success',
          confirmButtonText: 'OK'
-       })
-      navigate("/login")
-     }
-     else{
-      alert("error desconocido")
-     } 
-  }}>
+            })
+      navigate("/login")}}, 2000)
+      }
+    
+   }
+  }>
     <div className="container contenedor-principal"  >
     <div className="card carta-contenedora" >
 
