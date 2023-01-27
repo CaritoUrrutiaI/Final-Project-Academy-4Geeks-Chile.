@@ -7,7 +7,6 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { SignUp } from "./views/signup";
-import { Logout} from "./views/logout";
 import { NotFound} from "./views/notfound";
 import injectContext from "./store/appContext";
 import { PrivateRoute } from "./component/privaterouter";
@@ -38,7 +37,6 @@ const Layout = () => {
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/tusemana" element={<TuSemana />} />
 						<Route path="/login" element={<Login />} />
-						<Route path="/logout" element={<Logout />} />
 						<Route path="/signup" element={<SignUp />}/>
 						<Route path="/recetas" element={<Recetas/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
