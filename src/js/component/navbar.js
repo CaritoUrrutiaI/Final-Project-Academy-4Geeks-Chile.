@@ -1,8 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"
 import '../../styles/navbar.css'
 
 export const Navbar = () => {
+	let navigate = useNavigate();
+	const handleLogout = () => {
+		localStorage.clear()
+		Swal.fire({
+			title: 'FELICIDADES',
+			text: 'Has cerrado sesión exitosamente',
+			icon: 'success',
+			confirmButtonText: 'OK'
+		 })
+		 navigate("/")
+	}
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
@@ -48,9 +60,9 @@ export const Navbar = () => {
 				</li>
 				{/* logout icon */}
 				<li className="navbar-nav px-3">
-					<Link to="/logout" className="text-decoration-none">
+					<a onClick={handleLogout} className="text-decoration-none">
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
-					</Link>
+					</a>
 				</li>
 			</nav>
 			<div className="linea-azul-navbar"></div>
