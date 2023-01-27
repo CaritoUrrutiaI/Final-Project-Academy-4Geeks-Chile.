@@ -47,21 +47,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (result.token) {
 							setStore({ user: result })
 
+							localStorage.clear();
+        					localStorage.setItem('user-token', result.token);
+
 							alert("ingreso completado")
 							window.location.href = "/vistausuario";
-
-							console.log(result)
-							if (result.token) {
-								setStore({ user: result })
-								alert("ingreso completado")
-								window.location.href = "/";
-							}
-							else {
-								alert("error")
-							}
 						}
-					}
-					)
+						else {
+							alert("error")
+						}
+					})
 
 					.catch(error => console.log('error', error));
 			},
