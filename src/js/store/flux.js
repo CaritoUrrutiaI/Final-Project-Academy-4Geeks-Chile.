@@ -69,6 +69,7 @@ const getState = ({
 						}
 
 					)
+
 					.catch(error => console.log('error', error));
 			},
 

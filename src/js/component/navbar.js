@@ -53,6 +53,7 @@ export const Navbar = () => {
 					</Link>
 				</li>
 				{/* logout icon */}
+
 				<li className="navbar-nav px-3" onClick={()=>{
 					setDataUser (localStorage.removeItem("datauser"))
 				}
