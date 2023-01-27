@@ -42,33 +42,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/user", requestOptions)
 					.then(response => response.json())
-					.then(result => {
+					.then(result => { 
 					console.log(result)	
-					if(result.token){
-
-					
+					if(result.token){			
 					setStore({user:result})
-					
-						alert("ingreso completado")
-						window.location.href ="/vistausuario";
-
-						console.log(result)
-						if (result.token) {
-
-
-							setStore({ user: result })
-
-							alert("ingreso completado")
+					alert("ingreso completado")
+					window.location.href ="/vistausuario";
+					console.log(result)
+					 if (result.token) {
+					   localStorage.setItem('datauser', JSON.stringify(result))
+					   setStore({ user: result })
+					   alert("ingreso completado")
 							window.location.href = "/";
 						}
 						else {
 							alert("error")
-						}}
-
+						}} }
+						
 					)
-
 					.catch(error => console.log('error', error));
-			},
+					},
+
 			signup: (username, email, name, apellido, contraseña) => {
 				const store = getStore()
 				var myHeaders = new Headers();
