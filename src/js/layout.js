@@ -9,7 +9,8 @@ import { Login } from "./views/login";
 import { SignUp } from "./views/signup";
 import { NotFound} from "./views/notfound";
 import injectContext from "./store/appContext";
-import { PrivateRoute } from "./component/privaterouter";
+
+import ProtectedRoute from "./component/protectedRoute";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { VistaUsuario } from "./views/vistausuario";
@@ -35,12 +36,20 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="/tusemana" element={<TuSemana />} />
+						<Route path='/tusemana' element={
+							<ProtectedRoute>
+								<TuSemana />
+							</ProtectedRoute>
+						} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/signup" element={<SignUp />}/>
 						<Route path="/recetas" element={<Recetas/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
-						<Route path="/vistausuario" element={<VistaUsuario />}/>
+						<Route path='/vistausuario' element={
+							<ProtectedRoute>
+								<VistaUsuario />
+							</ProtectedRoute>
+						} />
 						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
 						<Route path="*" element={<NotFound />} />
