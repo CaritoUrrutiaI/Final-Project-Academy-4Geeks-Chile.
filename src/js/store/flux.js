@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			email:'',
+			email: '',
 			user: {},
 			recetas: [],
 			recetasFav: [],
@@ -43,28 +43,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/user", requestOptions)
 					.then(response => response.json())
 					.then(result => {
-					console.log(result)	
-					if(result.token){
-
-					
-					setStore({user:result})
-					
-						alert("ingreso completado")
-						window.location.href ="/vistausuario";
-
 						console.log(result)
 						if (result.token) {
-
-
 							setStore({ user: result })
 
 							alert("ingreso completado")
-							window.location.href = "/";
-						}
-						else {
-							alert("error")
-						}}
+							window.location.href = "/vistausuario";
 
+							console.log(result)
+							if (result.token) {
+								setStore({ user: result })
+								alert("ingreso completado")
+								window.location.href = "/";
+							}
+							else {
+								alert("error")
+							}
+						}
+					}
 					)
 
 					.catch(error => console.log('error', error));
@@ -90,15 +86,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions) 
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions)
 					.then(response => response.json())
-					.then(result =>{
-						if(result.email){
+					.then(result => {
+						if (result.email) {
 							console.log("result")
-							setStore({email:result.email})
-							
+							setStore({ email: result.email })
+
 						}
-						else{
+						else {
 							alert("error")
 						}
 					})
@@ -116,7 +112,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			addRecetasFav: (nombre) => {
 				const store = getStore();
 				store.recetasFav != '' ?
-					setStore({recetasFav: [...store.recetasFav, nombre]})
+					setStore({ recetasFav: [...store.recetasFav, nombre] })
 					: setStore({ recetasFav: [nombre] })
 			},
 
@@ -128,11 +124,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 			},
-			addTodo: (registro) =>{
+			addTodo: (registro) => {
 				const store = getStore();
 				store.todo != '' ?
-				setStore({todo: [...store.todo, registro]})
-				: setStore({todo: [registro]})
+					setStore({ todo: [...store.todo, registro] })
+					: setStore({ todo: [registro] })
 			},
 			changeColor: (index, color) => {
 				//get the store
