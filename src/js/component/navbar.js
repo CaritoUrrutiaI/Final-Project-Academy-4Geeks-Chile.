@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import '../../styles/navbar.css'
 import { Context } from "../store/appContext";
 
+
+
 export const Navbar = () => {
 	const {actions,store}=useContext(Context)
 	const [datauser,setDataUser] = useState(JSON.parse(localStorage.getItem("datauser") ))
+
 	return (
 		<div>
 			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
@@ -43,7 +46,7 @@ export const Navbar = () => {
 
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
-						<a className="nav-link  navbarFontColor" href="#">Login{datauser?.info_user.email}</a>
+						<a className="nav-link  navbarFontColor" href="#">{datauser ? datauser.info_user.email : "Login"}</a>
 					</Link>
 					<Link to="/signup" className="text-decoration-none">
 						<a className="nav-link  navbarFontColor" href="#">Signup</a>
@@ -55,6 +58,7 @@ export const Navbar = () => {
 				}
 				}>
 					<Link to="/logout" className="text-decoration-none">
+						
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
 					</Link>
 				</li>

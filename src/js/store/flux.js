@@ -1,21 +1,25 @@
-const getState = ({ getStore, getActions, setStore }) => {
+const getState = ({
+	getStore,
+	getActions,
+	setStore
+}) => {
 	return {
 		store: {
-			email:'',
+			email: '',
 			user: {},
 			recetas: [],
 			recetasFav: [],
 			todo: [],
 			demo: [{
-				title: "FIRST",
-				background: "white",
-				initial: "white"
-			},
-			{
-				title: "SECOND",
-				background: "white",
-				initial: "white"
-			}
+					title: "FIRST",
+					background: "white",
+					initial: "white"
+				},
+				{
+					title: "SECOND",
+					background: "white",
+					initial: "white"
+				}
 			]
 		},
 		actions: {
@@ -42,26 +46,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/user", requestOptions)
 					.then(response => response.json())
-					.then(result => { 
-					console.log(result)	
-					if(result.token){			
-					setStore({user:result})
-					alert("ingreso completado")
-					window.location.href ="/vistausuario";
-					console.log(result)
-					 if (result.token) {
-					   localStorage.setItem('datauser', JSON.stringify(result))
-					   setStore({ user: result })
-					   alert("ingreso completado")
-							window.location.href = "/";
+					.then(result => {
+							console.log(result)
+							if (result.token) {
+								setStore({
+									user: result
+								})
+								alert("ingreso completado")
+								window.location.href = "/vistausuario";
+								console.log(result)
+								if (result.token) {
+									localStorage.setItem('datauser', JSON.stringify(result))
+									setStore({
+										user: result
+									})
+									alert("ingreso completado")
+									window.location.href = "/";
+								} else {
+									alert("error")
+								}
+							}
 						}
-						else {
-							alert("error")
-						}} }
-						
+
 					)
 					.catch(error => console.log('error', error));
-					},
+			},
 
 			signup: (username, email, name, apellido, contraseña) => {
 				const store = getStore()
@@ -84,34 +93,49 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions) 
+				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions)
 					.then(response => response.json())
-					.then(result =>{
-						if(result.email){
-							console.log("result")
-							setStore({email:result.email})
-							
+					.then(result => {
+							console.log(result)
+							if (result.token) {
+								setStore({
+									user: result
+								})
+								alert("ingreso completado")
+								window.location.href = "/vistausuario";
+								console.log(result)
+								if (result.token) {
+									localStorage.setItem('datauser', JSON.stringify(result))
+									setStore({
+										user: result
+									})
+									alert("ingreso completado")
+									window.location.href = "/";
+								} else {
+									alert("error")
+								}
+							}
 						}
-						else{
-							alert("error")
-						}
-					})
-					/*.then(result => setStore({
-						email: result.email
-					}))*/
-					.catch(error => alert(error));
 
+					)
+					.catch(error => console.log('error', error));
 			},
 			recetasApi: () => {
 				fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian")
 					.then(response => response.json())
-					.then(data => setStore({ recetas: data.meals }))
+					.then(data => setStore({
+						recetas: data.meals
+					}))
 			},
 			addRecetasFav: (nombre) => {
 				const store = getStore();
 				store.recetasFav != '' ?
-					setStore({recetasFav: [...store.recetasFav, nombre]})
-					: setStore({ recetasFav: [nombre] })
+					setStore({
+						recetasFav: [...store.recetasFav, nombre]
+					}) :
+					setStore({
+						recetasFav: [nombre]
+					})
 			},
 
 			deleteRecetasFav: (nombre) => {
@@ -122,11 +146,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 			},
-			addTodo: (registro) =>{
+			addTodo: (registro) => {
 				const store = getStore();
 				store.todo != '' ?
-				setStore({todo: [...store.todo, registro]})
-				: setStore({todo: [registro]})
+					setStore({
+						todo: [...store.todo, registro]
+					}) :
+					setStore({
+						todo: [registro]
+					})
 			},
 			changeColor: (index, color) => {
 				//get the store
