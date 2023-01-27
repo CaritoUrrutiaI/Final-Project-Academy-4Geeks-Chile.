@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					window.location.href ="/vistausuario";
 					console.log(result)
 					 if (result.token) {
-					   localStorage.setItem('datauser', JSON.stringify(result))
+					   localStorage.setItem('datauser', JSON.stringify(result)) //se define el local storage para las rutas privadas
 					   setStore({ user: result })
 					   alert("ingreso completado")
 							window.location.href = "/";

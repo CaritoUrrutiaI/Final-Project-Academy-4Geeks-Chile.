@@ -59,7 +59,7 @@ export const Navbar = () => {
 					<Link to="/logout" className="text-decoration-none">
 
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
-					</a>
+					</Link>
 				</li>
 			</nav>
 			<div className="linea-azul-navbar"></div>
