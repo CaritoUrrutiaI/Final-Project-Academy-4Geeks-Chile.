@@ -8,8 +8,8 @@ export const CentralCard = () => {
 
         <div className="card w-100 cartas alturaMin" >
             <div className="card-body">
-                <h3 className="card-title text-center">Actividades</h3>
-                <p className="card-text ">Lista de actividades</p>
+                <h2 className="card-title text-center">Actividades</h2>
+                <h3 className="card-text ">Lista de actividades</h3>
             </div>
         </div>
 
@@ -18,13 +18,14 @@ export const CentralCard = () => {
 
 export const FotoCard = () => {
     const { store, actions } = useContext(Context);
+    const dataUser = JSON.parse(localStorage.getItem("datauser"));
     return (
 
         <div className="card w-100 cartas" >
             <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle mx-auto position-absolute top-0 start-50 translate-middle imagenPerfil" alt="Imagen Perfil" />
             <div className="card-body pt-5 mt-5">
-                <h5 className="card-title text-center">{store.user != '' ? store.user.username : "Nombre de Usuario"}</h5>
-                <p className="card-text text-center">{store.user != '' ? store.user.email : "Email"}</p>
+                <h3 className="card-title text-center">{dataUser != '' ? dataUser.info_user?.username.toUpperCase(): "Nombre de Usuario"}</h3>
+                <h3 className="card-text text-center">{dataUser  != '' ? dataUser.info_user?.email : "Email"}</h3>
             </div>
         </div>
 
@@ -38,7 +39,7 @@ export const DestacadosCard = () => {
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
-                <h5 className="card-title">Tareas por hacer</h5>
+                <h3 className="card-title">Tareas por hacer</h3>
                 <form className='container-fluid d-flex justify-content-between mb-2' onSubmit={(e) => {
                     event.preventDefault();
                     console.log(e.target[0].value);
@@ -64,7 +65,7 @@ export const DerechaCard = () => {
     return (
         <div className="card w-100 cartas alturaMin">
             <div className="card-body text-center">
-                <h5 className="card-title">Recetas Favoritas</h5>
+                <h3 className="card-title">Recetas Favoritas</h3>
                 <ul className="list-group">
                     {store.recetasFav != '' ? store.recetasFav.map((elem, index) => {
                         return (<li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1 ">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={() => {

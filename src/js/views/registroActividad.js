@@ -41,41 +41,41 @@ export const RegistrarActividad=()=>{
             
                 <div className="col-6">
 
-                    <div class="mb-3">
-                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Distancia Km/H"/>
+                    <div className="mb-3">
+                         <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Distancia Km/H"/>
                     </div>
                 
-                    <div class="mb-3">
-                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Tiempo"/>
+                    <div className="mb-3">
+                         <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="Tiempo"/>
                     </div>   
                     
-                    <div class="mb-3">
+                    <div className="mb-3">
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
-                            <label class="form-check-label textoTamañoGrande" for="inlineRadio1">	&#128526;</label>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                            <label className="form-check-label textoTamañoGrande" for="inlineRadio1">	&#128526;</label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">&#128578;</label>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label className="form-check-label textoTamañoGrande" for="inlineRadio2">&#128578;</label>
                         </div>
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">	&#128558;&#8205;&#128168;</label>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label className="form-check-label textoTamañoGrande" for="inlineRadio2">	&#128558;&#8205;&#128168;</label>
                         </div>
                         
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
-                            <label class="form-check-label textoTamañoGrande" for="inlineRadio2">&#129326;</label>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                            <label className="form-check-label textoTamañoGrande" for="inlineRadio2">&#129326;</label>
                         </div>
    
                     </div>
                 
                 </div>
-                <div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-success" type="button">Ingresar</button>
+                <div className="d-grid gap-2 col-6 mx-auto">
+  <button className="btn btn-success" type="button">Ingresar</button>
   
 </div>
             </div>
