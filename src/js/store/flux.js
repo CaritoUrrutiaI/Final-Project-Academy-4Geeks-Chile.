@@ -57,7 +57,9 @@ const getState = ({
 								console.log(result)
 								if (result.token) {
 									localStorage.setItem('datauser', JSON.stringify(result))
-									localStorage.setItem('user-token', JSON.stringify(result.token))
+
+									localStorage.setItem('user-token', result.token);
+
 									setStore({
 										user: result
 									})
@@ -70,7 +72,7 @@ const getState = ({
 						}
 
 					)
-
+				
 					.catch(error => console.log('error', error));
 			},
 

@@ -2,14 +2,33 @@
 import React, { useContext } from 'react'
 import '../../styles/cards.css'
 import { Context } from '../store/appContext'
+import '../../styles/cartadeportes.css'
 
 export const CentralCard = () => {
     return (
-
         <div className="card w-100 cartas alturaMin" >
+            <h3 className="card-title text-center">Actividades</h3>
+            <p className="card-text ">Lista de actividades</p>
+            
             <div className="card-body">
-                <h2 className="card-title text-center">Actividades</h2>
-                <h3 className="card-text ">Lista de actividades</h3>
+
+            <div class="card-body">
+            <div className='card-header d-flex justify-content-center'>
+                <h5>Deportes</h5>
+            </div>
+            <div class="cartadeportes d-flex justify-content-between">
+                <div>
+                    <h5 class="card-title">Distancia: {localStorage.getItem("distancia")}</h5>
+                    <h5 class="card-title">Tiempo: {localStorage.getItem("tiempo")}</h5>
+                </div>
+                <div className="me-5 mt-2 fs-2">
+                    {localStorage.getItem("emoji")}
+                </div>
+            </div>
+        </div>     
+            
+            
+
             </div>
         </div>
 
