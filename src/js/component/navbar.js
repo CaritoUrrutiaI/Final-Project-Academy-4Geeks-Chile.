@@ -2,13 +2,22 @@ import React, { useContext,useState} from "react";
 import { Link } from "react-router-dom";
 import '../../styles/navbar.css'
 import { Context } from "../store/appContext";
-
+import Swal from "sweetalert2"
 
 
 export const Navbar = () => {
 	const {actions,store}=useContext(Context)
 	const [datauser,setDataUser] = useState(JSON.parse(localStorage.getItem("datauser") ))
 	const [token,setToken] = useState(JSON.parse(localStorage.getItem("user-token") ))
+		const handleLogout = () => {
+		setDataUser (localStorage.removeItem("datauser"))
+        setToken (localStorage.removeItem("user-token"))
+		Swal.fire({
+		title: 'FELICIDADES',
+		text: 'Has cerrado sesión exitosamente',
+		icon: 'success',
+		confirmButtonText: 'OK'
+		})}
 
 
 	return (
@@ -48,7 +57,7 @@ export const Navbar = () => {
 
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
-						<a className="nav-link  navbarFontColor" href="#">{datauser ? datauser.info_user.email : "Login"}</a>
+						<a className="nav-link  navbarFontColor" href="#">{datauser ? datauser?.info_user.email : "Login"}</a>
 					</Link>
 					<Link to="/signup" className="text-decoration-none">
 						<a className="nav-link  navbarFontColor" href="#">Signup</a>
@@ -57,8 +66,7 @@ export const Navbar = () => {
 				{/* logout icon */}
 
 
-				<li className="navbar-nav px-3" onClick={()=>{setDataUser (localStorage.removeItem("datauser"),
-				setToken(localStorage.removeItem("user-token")))}}>
+				<li className="navbar-nav px-3" onClick={()=>{handleLogout()}}>
 
 
 					<Link to="/" className="text-decoration-none">
