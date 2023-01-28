@@ -55,10 +55,10 @@ export const Navbar = () => {
 				{/* logout icon */}
 
 				<li className="navbar-nav px-3" onClick={()=>{
-					setDataUser (localStorage.removeItem("datauser"))
+					setDataUser (localStorage.removeItem("user-token"))
 				}
 				}>
-					<Link to="/logout" className="text-decoration-none">
+					<Link to="/" className="text-decoration-none">
 						
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
 					</Link>
