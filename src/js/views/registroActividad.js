@@ -4,6 +4,7 @@ import bike from "../../img/image 11.png";
 import running from "../../img/image 12.png";
 import hike from "../../img/image 13.png";
 import swim from "../../img/image 14.png";
+
 import "../../styles/entrenamientos.css";
 
 export const RegistrarActividad = () => {
@@ -31,6 +32,7 @@ export const RegistrarActividad = () => {
         <div className="text-center">
           <h1> Registro de actividad: {actividad} </h1>
             <div className="row container-fluid">
+
             <div className="col-3">
               <img src={imageSrc} width="200" className="vista"></img>
             </div>
@@ -132,6 +134,7 @@ export const RegistrarActividad = () => {
                             
                         </div>
                     </form>
+
             </div>
             </div>
             </div>)}

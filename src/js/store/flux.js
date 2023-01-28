@@ -57,7 +57,9 @@ const getState = ({
 								console.log(result)
 								if (result.token) {
 									localStorage.setItem('datauser', JSON.stringify(result))
+
 									localStorage.setItem('user-token', result.token);
+
 									setStore({
 										user: result
 									})
@@ -104,7 +106,7 @@ const getState = ({
 									user: result
 								})
 								alert("ingreso completado")
-								window.location.href = "/vistausuario";
+								//window.location.href = "/vistausuario";
 								console.log(result)
 								if (result.token) {
 									localStorage.setItem('datauser', JSON.stringify(result))
@@ -144,6 +146,14 @@ const getState = ({
 				const store = getStore();
 				setStore({
 					recetasFav: store.recetasFav.filter((nom) => {
+						return nom != nombre
+					})
+				})
+			},
+			deleteTodo: (nombre) => {
+				const store = getStore();
+				setStore({
+					todo: store.todo.filter((nom) => {
 						return nom != nombre
 					})
 				})

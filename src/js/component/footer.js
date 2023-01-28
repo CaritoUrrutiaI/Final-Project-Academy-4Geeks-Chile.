@@ -8,23 +8,23 @@ export const Footer = () => (
 		<footer className="py-3 text-center footerColor ">
 			<div className="RR.SS pb-1">
 				<a href="https://www.gmail.com" >
-					<i class="fa-regular fa-envelope textoTamañoGrande" alt="Correo"></i>
+					<i className="fa-regular fa-envelope textoTamañoGrande footerFontColor mx-2" alt="Correo"></i>
 				</a>
 				<a href="https://facebook.com" >
-					<i class="fa-brands fa-facebook textoTamañoGrande" alt="Facebook"></i>
+					<i className="fa-brands fa-facebook textoTamañoGrande footerFontColor mx-2" alt="Facebook"></i>
 				</a>
 				<a href="https://linkeminn.com" >
-					<i class="fa-brands fa-linkedin textoTamañoGrande" alt="Linkedin"></i>
+					<i className="fa-brands fa-linkedin textoTamañoGrande footerFontColor mx-2" alt="Linkedin"></i>
 				</a>
 				<a href="https://instagram.com" >
-					<i class="fa-brands fa-instagram textoTamañoGrande" alt="Instagram"></i>
+					<i className="fa-brands fa-instagram textoTamañoGrande footerFontColor mx-2" alt="Instagram"></i>
 				</a>
 				<a href="https://twitter.com" >
-					<i class="fa-brands fa-twitter textoTamañoGrande" alt="Twitter"></i>
+					<i className="fa-brands fa-twitter textoTamañoGrande footerFontColor mx-2" alt="Twitter"></i>
 				</a>
 			</div>
 			<p className="p-0 m-0">
-				<i className="fa-regular fa-copyright" />  Todos los derechos reservados by{" "}
+				<i className="fa-regular fa-copyright m-2" />  Todos los derechos reservados by{" "}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
 			</p>
 		</footer>
