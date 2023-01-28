@@ -39,13 +39,12 @@ export const RegistrarActividad = () => {
                     <form
                     onSubmit={(evento) => {
                     evento.preventDefault();
-                    localStorage.setItem("distancia", evento.target.distance.value);
-                    localStorage.setItem("tiempo", evento.target.time.value); 
+                    localStorage.setItem("distancia", evento.target.distancia.value);
+                    localStorage.setItem("tiempo", evento.target.tiempo.value); 
                     localStorage.setItem("emoji", evento.target.emoji.value);
+                    
                     }}>
-                    <h1>{localStorage.getItem("distancia")}</h1>
-                    <h1>{localStorage.getItem("tiempo")}</h1>
-                    <h1>{localStorage.getItem("emoji")}</h1>
+                    
                     
                     <h1>cual es tu nombre?</h1>
                     <div class="mb-3">
@@ -54,7 +53,7 @@ export const RegistrarActividad = () => {
                         class="form-control"
                         id="exampleFormControlInput1"
                         placeholder="Distancia Km/H"
-                        name="distance"
+                        name="distancia"
                     />
                     </div>
                     <div class="mb-3">
@@ -63,7 +62,7 @@ export const RegistrarActividad = () => {
                         class="form-control"
                         id="exampleFormControlInput1"
                         placeholder="Tiempo"
-                        name="time"
+                        name="tiempo"
                     />
                     </div>
                    
@@ -74,14 +73,14 @@ export const RegistrarActividad = () => {
                                     type="radio"
                                     name="emoji"
                                     id="inlineRadio1"
-                                    value="option1"
+                                    value="😎"
                                 />
                                 <label
                                     class="form-check-label textoTamañoGrande"
                                     for="inlineRadio1"
                                 >
                                     {" "}
-                                    &#128526;
+                                    😎
                                 </label>
                             </div>
     
@@ -91,13 +90,13 @@ export const RegistrarActividad = () => {
                                     type="radio"
                                     name="emoji"
                                     id="inlineRadio2"
-                                    value="option2"
+                                    value="🙂"
                                 />
                                 <label
                                     class="form-check-label textoTamañoGrande"
                                     for="inlineRadio2"
                                 >
-                                    &#128578;
+                                    🙂
                                 </label>
                             </div>
     
@@ -107,12 +106,12 @@ export const RegistrarActividad = () => {
                                     type="radio"
                                     name="emoji"
                                     id="inlineRadio2"
-                                    value="option2"
+                                    value=" 😰"
                                 />
                                 <label
                                     class="form-check-label textoTamañoGrande" for="inlineRadio2"
                                 >
-                                    &#128578;
+                                    😰
                                 </label>    
                             </div>
                             <div class="form-check form-check-inline">
@@ -121,12 +120,12 @@ export const RegistrarActividad = () => {
                                     type="radio"
                                     name="emoji"
                                     id="inlineRadio2"
-                                    value="option2"
+                                    value=" 🤮"
                                 />
                                 <label
                                     class="form-check-label textoTamañoGrande" for="inlineRadio2"
                                 >
-                                    &#128578;
+                                    🤮
                                 </label>    
                             </div>
                             <div><button type="submit">enviar</button></div>
