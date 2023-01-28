@@ -8,6 +8,8 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const {actions,store}=useContext(Context)
 	const [datauser,setDataUser] = useState(JSON.parse(localStorage.getItem("datauser") ))
+	const [token,setToken] = useState(JSON.parse(localStorage.getItem("user-token") ))
+
 
 	return (
 		<div>
@@ -54,9 +56,10 @@ export const Navbar = () => {
 				</li>
 				{/* logout icon */}
 
-				<li className="navbar-nav px-3" onClick={()=>{setDataUser (localStorage.removeItem("datauser"))}}>
+				<li className="navbar-nav px-3" onClick={()=>{setDataUser (localStorage.removeItem("datauser"),
+				setToken(localStorage.removeItem("user-token")))}}>
 
-					<Link to="/logout" className="text-decoration-none">
+					<Link to="/" className="text-decoration-none">
 						
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
 					</Link>

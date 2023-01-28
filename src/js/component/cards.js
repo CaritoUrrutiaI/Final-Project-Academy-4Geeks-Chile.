@@ -24,8 +24,8 @@ export const FotoCard = () => {
         <div className="card w-100 cartas" >
             <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle mx-auto position-absolute top-0 start-50 translate-middle imagenPerfil" alt="Imagen Perfil" />
             <div className="card-body pt-5 mt-5">
-                <h3 className="card-title text-center">{dataUser != '' ? dataUser.info_user?.username.toUpperCase(): "Nombre de Usuario"}</h3>
-                <h3 className="card-text text-center">{dataUser  != '' ? dataUser.info_user?.email : "Email"}</h3>
+                <h3 className="card-title text-center">{dataUser != null ? dataUser.info_user?.username.toUpperCase(): "Nombre de Usuario"}</h3>
+                <h3 className="card-text text-center">{dataUser  != null ? dataUser.info_user?.email : "Email"}</h3>
             </div>
         </div>
 
@@ -49,7 +49,9 @@ export const DestacadosCard = () => {
                 </form>
                 <ul className="list-group">
                     {store.todo != '' ? store.todo.map((elem, index)=>{
-                        return <li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1">{elem} <i className="fas fa-eraser iconos iconoPointer"></i></li>})
+                        return <li key={index} className="list-group-item list-group-item-info d-flex justify-content-between mb-1">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={() => {
+                            actions.deleteTodo(elem)
+                        }}></i></li>})
                         : null
                 }
                 </ul>
