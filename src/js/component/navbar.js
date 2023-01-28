@@ -12,8 +12,8 @@ export const Navbar = () => {
 
 
 	return (
-		<div>
-			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
+		<div className="mb-0">
+			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 mb-0">
 				<nav className="navbar ps-3">
 					<div className="container-fluid">
 						<Link to="/" className="text-decoration-none">

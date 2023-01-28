@@ -42,10 +42,11 @@ export const DestacadosCard = () => {
                 <h3 className="card-title">Tareas por hacer</h3>
                 <form className='container-fluid d-flex justify-content-between mb-2' onSubmit={(e) => {
                     event.preventDefault();
-                    console.log(e.target[0].value);
+                    //console.log(e.target[0].value);
                     actions.addTodo(e.target[0].value);
+                    event.target[0].value = '';
                 }}>
-                    <input type="text" className="form-control" /> <button type='submit' className='btn ms-2'>🔎</button>
+                    <input type="text" className="form-control" /> <button type='submit' className='btn ms-2'><i class="fas fa-marker"></i></button>
                 </form>
                 <ul className="list-group">
                     {store.todo != '' ? store.todo.map((elem, index)=>{
