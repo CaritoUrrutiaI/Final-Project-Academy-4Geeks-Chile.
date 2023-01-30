@@ -124,7 +124,8 @@ export const CardRecetas = ({ nombre, imagen, llave, id }) => {
                     <button className="btn btn-success me-5" onClick={()=>{
                         actions.getRecetaPorId(id)
                         console.log(id)
-                        console.log(store.datosReceta)
+                        //console.log(store.datosReceta)
+                        //console.log(store.datosReceta[0].strInstructions)
                     }}>Descripción Receta</button>
                     </Link>
                 </div>
@@ -151,19 +152,22 @@ export const SemanaCard = () => {
     )
 }
 
-export const RecetaPorIdCard = ({foto, instrucciones, nombre}) => {
+export const RecetaPorIdCard = () => {
     const { store, actions } = useContext(Context);
-   
+    let instrucciones = store.datosReceta[0].strInstructions;
+    let foto = store.datosReceta[0].strMealThumb;
+    let nombre = store.datosReceta[0].strMeal;
+
     return (
         <div className="card w-100 cartas alturaMin mt-5 mb-5">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={foto ? {foto} : "Foto Receta"} className="img-fluid rounded-start" alt="..."/>
+                    <img src={foto ? foto : "Foto Receta"} className="img-fluid rounded-start " alt="..."/>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{nombre? {nombre}:"Nombre de la Receta"}</h5>
-                        <p className="card-text">{instrucciones? {instrucciones}:"Descripcion de la Receta (ING)"}</p>
+                        <h3 className="card-title">{nombre? nombre:"Nombre de la Receta"}</h3>
+                        <p className="card-text">{instrucciones? instrucciones:"Descripcion de la Receta (ING)"}</p>
                         <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
