@@ -19,6 +19,7 @@ import { TuSemana } from "./views/tusemana";
 import { RecuperarContrasena } from "./views/recuperarcontrasena";
 import { Entrenamiento } from "./views/entrenamientos";
 import { RegistrarActividad } from "./views/registroActividad";
+import { RecetaPorId } from "./views/recetaporid";
 
 
 //create your first component
@@ -52,6 +53,7 @@ const Layout = () => {
 						} />
 						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
+						<Route path="/recetaporid/:theid" element={<RecetaPorId/>}/>
 						<Route path="*" element={<NotFound />} />
 					</Routes>
 					<Footer />

@@ -36,6 +36,7 @@ const injectContext = PassedComponent => {
 			state.actions.deleteRecetasFav();
 			state.actions.addTodo();
 			state.actions.deleteTodo();
+			state.actions.getRecetaPorId();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

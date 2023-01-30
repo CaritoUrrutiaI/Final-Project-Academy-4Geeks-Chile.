@@ -9,17 +9,18 @@ const getState = ({
 			user: {},
 			recetas: [],
 			recetasFav: [],
+			datosReceta:[],
 			todo: [],
 			demo: [{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
+				title: "FIRST",
+				background: "white",
+				initial: "white"
+			},
+			{
+				title: "SECOND",
+				background: "white",
+				initial: "white"
+			}
 			]
 		},
 		actions: {
@@ -44,35 +45,35 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/user", requestOptions)
+				fetch("https://3000-jaranedag-proyectofinal-ntzv7krq8a3.ws-us84.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
+						console.log(result)
+						if (result.token) {
+							setStore({
+								user: result
+							})
+							alert("ingreso completado")
+							window.location.href = "/vistausuario";
 							console.log(result)
 							if (result.token) {
+								localStorage.setItem('datauser', JSON.stringify(result))
+
+								localStorage.setItem('user-token', JSON.stringify(result.token));
+
 								setStore({
 									user: result
 								})
 								alert("ingreso completado")
-								window.location.href = "/vistausuario";
-								console.log(result)
-								if (result.token) {
-									localStorage.setItem('datauser', JSON.stringify(result))
-
-									localStorage.setItem('user-token', JSON.stringify(result.token));
-
-									setStore({
-										user: result
-									})
-									alert("ingreso completado")
-									window.location.href = "/";
-								} else {
-									alert("error")
-								}
+								window.location.href = "/";
+							} else {
+								alert("error")
 							}
 						}
+					}
 
 					)
-				
+
 					.catch(error => console.log('error', error));
 			},
 
@@ -97,29 +98,29 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us84.gitpod.io/signup", requestOptions)
+				fetch("https://3000-jaranedag-proyectofinal-ntzv7krq8a3.ws-us84.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
+						console.log(result)
+						if (result.token) {
+							setStore({
+								user: result
+							})
+							alert("ingreso completado")
+							//window.location.href = "/vistausuario";
 							console.log(result)
 							if (result.token) {
+								localStorage.setItem('datauser', JSON.stringify(result))
 								setStore({
 									user: result
 								})
 								alert("ingreso completado")
-								//window.location.href = "/vistausuario";
-								console.log(result)
-								if (result.token) {
-									localStorage.setItem('datauser', JSON.stringify(result))
-									setStore({
-										user: result
-									})
-									alert("ingreso completado")
-									window.location.href = "/";
-								} else {
-									alert("error")
-								}
+								window.location.href = "/";
+							} else {
+								alert("error")
 							}
 						}
+					}
 
 					)
 					.catch(error => console.log('error', error));
@@ -141,7 +142,14 @@ const getState = ({
 						recetasFav: [nombre]
 					})
 			},
-
+			 getRecetaPorId: (id) => {
+				 fetch(id ? "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id : "https://www.themealdb.com/api/json/v1/1/lookup.php?i=0")
+					.then(response => response.json())
+					.then(data => setStore({datosReceta : data.meals})
+					
+			)
+					
+			},
 			deleteRecetasFav: (nombre) => {
 				const store = getStore();
 				setStore({

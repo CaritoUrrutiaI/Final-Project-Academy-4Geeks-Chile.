@@ -15,7 +15,7 @@ export const Recetas = () => {
             <BuscadorRecetas />
             <div className="container-fluid d-flex justify-content-center row ">
                 {store.recetas.map((elem, index) => {
-                    return <CardRecetas nombre={elem.strMeal} imagen={elem.strMealThumb} key={index} />
+                    return <CardRecetas nombre={elem.strMeal} imagen={elem.strMealThumb} key={index} id={elem.idMeal}/>
 
                 })}
             </div>
