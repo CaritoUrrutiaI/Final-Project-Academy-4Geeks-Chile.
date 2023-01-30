@@ -41,11 +41,11 @@ export const Navbar = () => {
 						<a className="nav-link navbarFontColor" href="#">Deportes</a>
 						</Link>
 					</li>
-					<li className="nav-item">
+					{/*<li className="nav-item">
 						<Link to="/tusemana" className="text-decoration-none">
 							<a className="nav-link navbarFontColor" href="#">Tu semana</a>
 						</Link>
-					</li>
+	                </li>*/}
 				</ul>
 				{/* login icon */}
 				<li className="navbar-nav px-1">
