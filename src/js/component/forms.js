@@ -91,7 +91,7 @@ export const SignUpForm = (props) => {
          }
          else {
             actions.signup(nameUser, Email, name, apellido, contraseña)
-            alert("Espere un momento... 2 segundos")
+            alert("registro completado")
             setTimeout(() => {
                if (store.email != '') {
                   Swal.fire({
