@@ -9,7 +9,7 @@ const getState = ({
 			user: {},
 			recetas: [],
 			recetasFav: [],
-			datosReceta:[],
+			datosReceta:null,
 			todo: [],
 			demo: [{
 				title: "FIRST",
@@ -45,7 +45,7 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-jaranedag-proyectofinal-ntzv7krq8a3.ws-us84.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+				fetch("https://3000-jaranedag-proyectofinal-zlw02otqbcn.ws-us84.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -98,7 +98,7 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-jaranedag-proyectofinal-ntzv7krq8a3.ws-us84.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+				fetch("https://3000-jaranedag-proyectofinal-zlw02otqbcn.ws-us84.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -143,7 +143,7 @@ const getState = ({
 					})
 			},
 			 getRecetaPorId: (id) => {
-				 fetch(id ? "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id : "https://www.themealdb.com/api/json/v1/1/lookup.php?i=0")
+				 fetch(id != null ? "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id : "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52807")
 					.then(response => response.json())
 					.then(data => setStore({datosReceta : data.meals})
 					
