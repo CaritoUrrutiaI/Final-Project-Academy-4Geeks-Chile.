@@ -53,7 +53,7 @@ const Layout = () => {
 						} />
 						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
-						<Route path="/recetaporid/:theid" element={<RecetaPorId/>}/>
+						<Route path="/recetaporid/:id" element={<RecetaPorId/>}/>
 						<Route path="*" element={<NotFound />} />
 					</Routes>
 					<Footer />

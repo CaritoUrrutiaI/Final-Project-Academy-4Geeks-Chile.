@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react'
 import '../../styles/cards.css'
 import { Context } from '../store/appContext'
 import '../../styles/cartadeportes.css'
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 export const CentralCard = () => {
     return (
@@ -108,7 +108,7 @@ export const DerechaCard = () => {
 export const CardRecetas = ({ nombre, imagen, llave, id }) => {
 
     const { store, actions } = useContext(Context);
-    const ruta = "/recetaporid/"+id
+    const ruta = "/recetaporid/" + id
     return (
         <div key={llave} className="card m-5 anchoMinRecetas cartas">
             <img src={imagen} className="card-img-top p-1 pt-3" alt="..." />
@@ -117,16 +117,16 @@ export const CardRecetas = ({ nombre, imagen, llave, id }) => {
                 <p className="card-text"></p>
                 <p className="card-text"></p>
                 <div className='container-fluid d-flex justify-content-between bd-highlight'>
-                    <button className="btn btn-success ms-5 " onClick={() => {
+                    <button className="btn btn-success ms-3 " onClick={() => {
                         actions.addRecetasFav(nombre)
                     }}>Agregar a Favoritos <i className="ms-1 fas fa-heart"></i></button>
                     <Link to={ruta}>
-                    <button className="btn btn-success me-5" onClick={()=>{
-                        actions.getRecetaPorId(id)
-                        console.log(id)
-                        //console.log(store.datosReceta)
-                        //console.log(store.datosReceta[0].strInstructions)
-                    }}>Descripción Receta</button>
+                        <button className="btn btn-success me-3" onClick={() => {
+                            actions.getRecetaPorId(id)
+                            //console.log(id)
+                            //console.log(store.datosReceta)
+                            //console.log(store.datosReceta[0].strInstructions)
+                        }}>Descripción Receta</button>
                     </Link>
                 </div>
             </div>
@@ -153,22 +153,22 @@ export const SemanaCard = () => {
 }
 
 export const RecetaPorIdCard = () => {
+
     const { store, actions } = useContext(Context);
     let instrucciones = store.datosReceta[0].strInstructions;
     let foto = store.datosReceta[0].strMealThumb;
     let nombre = store.datosReceta[0].strMeal;
-
+  
     return (
         <div className="card w-100 cartas alturaMin mt-5 mb-5">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={foto ? foto : "Foto Receta"} className="img-fluid rounded-start " alt="..."/>
+                    <img src={foto ? foto : "Foto Receta"} className="img-fluid rounded-start " alt="..." />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h3 className="card-title">{nombre? nombre:"Nombre de la Receta"}</h3>
-                        <p className="card-text">{instrucciones? instrucciones:"Descripcion de la Receta (ING)"}</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        <h3 className="card-title">{nombre ? nombre : "Nombre de la Receta"}</h3>
+                        <p className="card-text">{instrucciones ? instrucciones : "Descripcion de la Receta (ING)"}</p>
                     </div>
                 </div>
             </div>
