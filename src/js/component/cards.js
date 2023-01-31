@@ -70,7 +70,7 @@ export const DestacadosCard = () => {
                 </form>
                 <ul className="list-group">
                     {store.todo != '' ? store.todo.map((elem, index) => {
-                        return <li key={index} className="list-group-item  d-flex justify-content-between mb-1">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={() => {
+                        return <li key={index} className="list-group-item  d-flex justify-content-between mb-1 backgroundAzul">{elem} <i className="fas fa-eraser iconos iconoPointer" onClick={() => {
                             actions.deleteTodo(elem)
                         }}></i></li>
                     })

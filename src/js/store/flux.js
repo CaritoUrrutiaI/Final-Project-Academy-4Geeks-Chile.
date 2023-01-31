@@ -45,7 +45,7 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-jaranedag-proyectofinal-zlw02otqbcn.ws-us84.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+				fetch("https://3000-jaranedag-proyectofinal-z01j7y018k3.ws-us84.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
@@ -98,7 +98,7 @@ const getState = ({
 					redirect: 'follow'
 				};
 
-				fetch("https://3000-jaranedag-proyectofinal-zlw02otqbcn.ws-us84.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+				fetch("https://3000-jaranedag-proyectofinal-z01j7y018k3.ws-us84.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
 					.then(response => response.json())
 					.then(result => {
 						console.log(result)
