@@ -20,6 +20,7 @@ import { RecuperarContrasena } from "./views/recuperarcontrasena";
 import { Entrenamiento } from "./views/entrenamientos";
 import { RegistrarActividad } from "./views/registroActividad";
 import { RecetaPorId } from "./views/recetaporid";
+import {CambiarContrasena} from "./views/cambiarpass"
 
 
 //create your first component
@@ -48,6 +49,7 @@ const Layout = () => {
 						<ProtectedRoute>
 						<Recetas/>
 						</ProtectedRoute>	}/>
+						<Route path="/cambiarcontrasena" element={<CambiarContrasena/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
 						<Route path='/vistausuario' element={
 							<ProtectedRoute>

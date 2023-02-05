@@ -45,9 +45,19 @@ export const FotoCard = () => {
     let imagesArray = [];
     input?.addEventListener("change",function(){
         const file = input.files
+        if(imagesArray.length === 0){
         imagesArray.push(file[0])
         displayImages()
+        localStorage.setItem("imagen",JSON.stringify(imagesArray))
+    }else {
+        alert("solo puedes subir una imagen")
+    }
     })
+    /*const storedImages = JSON.parse(localStorage.getItem("imagen"));
+    if(storedImages){
+        imagesArray = storedImages;
+        displayImages()
+    }*/
     function displayImages(){
         let images = "" 
         imagesArray.forEach((image,index)=>{
@@ -70,11 +80,12 @@ export const FotoCard = () => {
            {/* <input  className= "" type="file" accept="image/jpeg, image/png, image/jpg" placeholder=''/>*/}
             <div className="input-group mb-3">
                   
-              <input type="file" className="form-control" id="inputGroupFile01"/>
+              <input type="file" className="form-control" id="inputGroupFile01" style={{display: 'none'}}/>
+              <label htmlFor="inputGroupFile01" className="btn btn-success">Sube tu Foto</label>
            </div>
            
                 <output></output>
-                <span onClick={() => deleteImage(index)}>&times;</span>
+               { /* <span onClick={() => deleteImage(index)}>&times;</span>*/}
    
             <div className="card-body pt-5 mt-5">
                 <h3 className="card-title text-center">{dataUser != null ? dataUser.info_user?.username.toUpperCase() : "Nombre de Usuario"}</h3>

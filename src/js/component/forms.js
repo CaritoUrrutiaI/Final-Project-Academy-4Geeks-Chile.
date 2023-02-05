@@ -51,7 +51,9 @@ export const LoginForm = (props) => {
                   <br />
                   Aún no tienes cuenta ?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Registrate</button></Link>
                </div>
+               <Link to="/recuperarcontrasena">
                <button type="button" className="btn btn-link mb-2 fs-5">Has olvidado tu contraseña ?</button>
+               </Link>
             </div>
          </div>
       </form>
