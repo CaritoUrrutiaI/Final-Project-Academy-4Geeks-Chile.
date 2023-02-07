@@ -44,6 +44,8 @@ export const RegistrarActividad = () => {
                     localStorage.setItem("distancia", evento.target.distancia.value);
                     localStorage.setItem("tiempo", evento.target.tiempo.value); 
                     localStorage.setItem("emoji", evento.target.emoji.value);
+                    localStorage.setItem("actividad", actividad);
+
                     
                     }}>
                     
