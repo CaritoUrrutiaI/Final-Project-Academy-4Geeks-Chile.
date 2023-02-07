@@ -1,12 +1,14 @@
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import '../../styles/cards.css'
 import { Context } from '../store/appContext'
 import '../../styles/cartadeportes.css'
 import '../../styles/output.css'
 import { Link, Navigate, useParams } from "react-router-dom";
 
+
 export const CentralCard = () => {
+    
     return (
         <div className="card w-100 cartas alturaMin" >
             <h3 className="card-title text-center">Actividades</h3>
@@ -17,12 +19,16 @@ export const CentralCard = () => {
                 <p className="card-text ">Lista de actividades</p>
                 <div className="card-body">
                     <div className='card-header d-flex justify-content-center'>
-                        <h5>Deportes</h5>
+                        <h5>{localStorage.getItem("actividad")}</h5>
                     </div>
                     <div className="cartadeportes d-flex justify-content-between">
                         <div>
+
+                            <h5 className="card-title">Distancia: {localStorage.getItem("distancia")} </h5>
+                            <h5 className="card-title">Tiempo: {localStorage.getItem("tiempo")}</h5>
+
                             <h5 className="card-title px-4">Distancia: {localStorage.getItem("distancia")}  Km</h5>
-                            <h5 className="card-title px-4">Tiempo: {localStorage.getItem("tiempo")}  Minutos</h5>
+
                         </div>
                         <div className="me-5 mt-2 fs-2">
                             {localStorage.getItem("emoji")}
@@ -34,6 +40,7 @@ export const CentralCard = () => {
 
     )
 }
+
 
 export const FotoCard = () => {
     const { store, actions } = useContext(Context);
