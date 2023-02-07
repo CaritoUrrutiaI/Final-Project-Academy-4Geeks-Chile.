@@ -2,9 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/forms.css";
-import { useForm } from "react-hook-form"
 import Swal from "sweetalert2"
+import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from "react-router-dom"
+
+const MySwal = withReactContent(Swal)
 
 export const LoginForm = (props) => {
    let navigate = useNavigate();
@@ -16,7 +18,7 @@ export const LoginForm = (props) => {
          let contraseña = evento.target[1].value
 
          if (Email == "" || contraseña == "") {
-            Swal.fire({
+            MySwal.fire({
                title: 'ERROR',
                text: 'Debes completar los datos',
                icon: 'error',
@@ -26,13 +28,13 @@ export const LoginForm = (props) => {
          }
          else {
             actions.login(Email, contraseña);
-            /* Swal.fire({
+            MySwal.fire({
                 title: 'FELICIDADES',
                 text: 'Inicio de sesion completado',
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
-              navigate("/")*/
+              navigate("/")
          }
       }}>
          <div className="container text-center d-flex justify-content-center" >
