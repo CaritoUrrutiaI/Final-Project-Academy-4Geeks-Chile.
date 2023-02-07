@@ -8,8 +8,8 @@ import "../../styles/entrenamientos.css";
 
 export const Entrenamiento=()=>{
     return(
-        <div className="text-center">
-            <h1>Entrenamientos</h1>
+        <div className="container text-center mb-5">
+            <h1 className="my-5">Entrenamientos</h1>
             <div className="row">
                 <div className="col-3">
                     <Link to="/registroActividad/Bike">

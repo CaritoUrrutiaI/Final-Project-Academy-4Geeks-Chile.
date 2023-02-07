@@ -1,23 +1,28 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2"
+import React, { useContext,useState} from "react";
+import { Link } from "react-router-dom";
 import '../../styles/navbar.css'
+import { Context } from "../store/appContext";
+import Swal from "sweetalert2"
+
 
 export const Navbar = () => {
-	let navigate = useNavigate();
-	const handleLogout = () => {
-		localStorage.clear()
+	const {actions,store}=useContext(Context)
+	const [datauser,setDataUser] = useState(JSON.parse(localStorage.getItem("datauser") ))
+	const [token,setToken] = useState(JSON.parse(localStorage.getItem("user-token") ))
+		const handleLogout = () => {
+		setDataUser (localStorage.removeItem("datauser"))
+        setToken (localStorage.removeItem("user-token"))
 		Swal.fire({
-			title: 'FELICIDADES',
-			text: 'Has cerrado sesión exitosamente',
-			icon: 'success',
-			confirmButtonText: 'OK'
-		 })
-		 navigate("/")
-	}
+		title: 'FELICIDADES',
+		text: 'Has cerrado sesión exitosamente',
+		icon: 'success',
+		confirmButtonText: 'OK'
+		})}
+
+
 	return (
-		<div>
-			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 ">
+		<div className="mb-0">
+			<nav className="navbar navbar-expand-lg  navbarColor textoTamañoMediano px-0 mb-0">
 				<nav className="navbar ps-3">
 					<div className="container-fluid">
 						<Link to="/" className="text-decoration-none">
@@ -36,11 +41,11 @@ export const Navbar = () => {
 						<a className="nav-link navbarFontColor" href="#">Deportes</a>
 						</Link>
 					</li>
-					<li className="nav-item">
+					{/*<li className="nav-item">
 						<Link to="/tusemana" className="text-decoration-none">
 							<a className="nav-link navbarFontColor" href="#">Tu semana</a>
 						</Link>
-					</li>
+	                </li>*/}
 				</ul>
 				{/* login icon */}
 				<li className="navbar-nav px-1">
@@ -52,17 +57,22 @@ export const Navbar = () => {
 
 				<li className="navbar-nav pe-3 ps-1">
 					<Link to="/login" className="text-decoration-none">
-						<a className="nav-link  navbarFontColor" href="#">Login</a>
+						<a className="nav-link  navbarFontColor" href="#">{datauser ? datauser?.info_user.email : "Login"}</a>
 					</Link>
 					<Link to="/signup" className="text-decoration-none">
 						<a className="nav-link  navbarFontColor" href="#">Signup</a>
 					</Link>
 				</li>
 				{/* logout icon */}
-				<li className="navbar-nav px-3">
-					<a onClick={handleLogout} className="text-decoration-none">
+
+
+				<li className="navbar-nav px-3" onClick={()=>{handleLogout()}}>
+
+
+					<Link to="/" className="text-decoration-none">
+						
 						<i className="fa-solid fa-arrow-right-from-bracket tamañotextoGrande"></i>
-					</a>
+					</Link>
 				</li>
 			</nav>
 			<div className="linea-azul-navbar"></div>

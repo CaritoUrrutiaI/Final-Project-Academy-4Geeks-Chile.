@@ -19,6 +19,8 @@ import { TuSemana } from "./views/tusemana";
 import { RecuperarContrasena } from "./views/recuperarcontrasena";
 import { Entrenamiento } from "./views/entrenamientos";
 import { RegistrarActividad } from "./views/registroActividad";
+import { RecetaPorId } from "./views/recetaporid";
+import {CambiarContrasena} from "./views/cambiarpass"
 
 
 //create your first component
@@ -43,15 +45,23 @@ const Layout = () => {
 						} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/signup" element={<SignUp />}/>
-						<Route path="/recetas" element={<Recetas/>}/>
+						<Route path="/recetas" element={
+						<ProtectedRoute>
+						<Recetas/>
+						</ProtectedRoute>	}/>
+						<Route path="/cambiarcontrasena" element={<CambiarContrasena/>}/>
 						<Route path="/recuperarcontrasena" element={<RecuperarContrasena/>}/>
 						<Route path='/vistausuario' element={
 							<ProtectedRoute>
 								<VistaUsuario />
 							</ProtectedRoute>
 						} />
-						<Route path="/entrenamiento" element={<Entrenamiento/>}/>
+						<Route path="/entrenamiento" element={
+						<ProtectedRoute>
+						<Entrenamiento/>
+						</ProtectedRoute>	}/>
 						<Route path="/registroActividad/:actividad" element={<RegistrarActividad/>}/>
+						<Route path="/recetaporid/:id" element={<RecetaPorId/>}/>
 						<Route path="*" element={<NotFound />} />
 					</Routes>
 					<Footer />

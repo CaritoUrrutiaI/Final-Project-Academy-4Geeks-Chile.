@@ -8,7 +8,7 @@ export const Home = () => (
 		<div className="row g-0">
 			<div id="sidebar-container" className="col-3">
 				<ul className="list-group">
-					<h3>Noticias Destacadas</h3>
+					<h3 className="text-center" >Noticias Destacadas</h3>
 					<li className="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.elmostrador.cl/generacion-m/2022/04/04/mas-del-40-de-los-chilenos-no-practica-deportes-por-falta-de-tiempo/" target="_blank" className="list-group-item list-group-item-action">Más del 40% de los chilenos no practica deportes por falta de tiempo</a>
@@ -73,7 +73,7 @@ export const Home = () => (
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" className="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
 					</li>
-					<li className="list-group-item">
+					{/*<li className="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" className="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
 					</li>
@@ -88,7 +88,7 @@ export const Home = () => (
 					<li className="list-group-item">
 						<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle" alt="Imagen Perfil" />
 						<a href="https://www.meds.cl/los-beneficios-del-deporte-los-ninos/" target="_blank" className="list-group-item list-group-item-action">Los beneficios del Deporte en los niños</a>
-					</li>
+					</li>*/}
 				</ul>
 			</div>
 			{/* carrousel Imagenes de deportes */}
@@ -123,7 +123,7 @@ export const Home = () => (
 				{/* Cards  */}
 				<div className="card-group row g-0">
 					<div className="card">
-						<img src="http://educagratis.cl/moodle/file.php/637/nutricion-deportiva.jpg" className="card-img-top" alt="figura de bicicleta formada sólo de frutas y verduras" />
+						<img src="http://educagratis.cl/moodle/file.php/637/nutricion-deportiva.jpg" className="card-img-top h-50" alt="figura de bicicleta formada sólo de frutas y verduras" />
 						<div className="card-body">
 							<h4 className="card-title"><b> ALIMENTACIÓN Y RENDIMIENTO DEPORTIVO </b></h4>
 							<h5 className="subtitle"> Te has preguntando alguna vez ¿Cómo influye la alimentación en el rendimiento de un deportista?</h5>
