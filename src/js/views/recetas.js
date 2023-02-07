@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { BuscadorRecetas } from "../component/buscarecetas";
 import { CardRecetas } from "../component/cards";
 import { Context } from "../store/appContext";
 
@@ -11,8 +10,7 @@ export const Recetas = () => {
 
     return (
         <div className="container text-center mb-5 mx-auto">
-            <h1 className="my-5">Recetas</h1>
-            <BuscadorRecetas />
+            <h1 className="my-5"><b>RECETAS SALUDABLES</b></h1>
             <div className="container-fluid d-flex justify-content-center row ">
                 {store.recetas.map((elem, index) => {
                     return <CardRecetas nombre={elem.strMeal} imagen={elem.strMealThumb} key={index} id={elem.idMeal}/>
