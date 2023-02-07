@@ -33,7 +33,6 @@ export const RegistrarActividad = () => {
         <div className="text-center">
           <h1> Registro de actividad: {actividad} </h1>
             <div className="row container-fluid">
-
             <div className="col-3">
               <img src={imageSrc} width="200" className="vista"></img>
             </div>
@@ -49,9 +48,6 @@ export const RegistrarActividad = () => {
 
                     
                     }}>
-                    
-                    
-                    
                     <div class="mb-3">
                     <input
                         type="number"

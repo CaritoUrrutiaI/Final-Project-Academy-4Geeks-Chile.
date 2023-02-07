@@ -15,24 +15,26 @@ export const CentralCard = () => {
             <h4 className="card-text ps-3">Lista de actividades</h4>
 
             <div className="card-body">
-
+                <h3 className="card-title text-center">Actividades</h3>
+                <p className="card-text ">Lista de actividades</p>
                 <div className="card-body">
                     <div className='card-header d-flex justify-content-center'>
                         <h5>{localStorage.getItem("actividad")}</h5>
                     </div>
                     <div className="cartadeportes d-flex justify-content-between">
                         <div>
+
                             <h5 className="card-title">Distancia: {localStorage.getItem("distancia")} </h5>
                             <h5 className="card-title">Tiempo: {localStorage.getItem("tiempo")}</h5>
+
+                            <h5 className="card-title px-4">Distancia: {localStorage.getItem("distancia")}  Km</h5>
+
                         </div>
                         <div className="me-5 mt-2 fs-2">
                             {localStorage.getItem("emoji")}
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 
