@@ -1,7 +1,23 @@
+<<<<<<< Updated upstream
+=======
+.footer{
+    position: absolute;
+    align-self: flex-end;
+    bottom: 0;
+    width: 100%;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content{
+flex: 1;
+}
+>>>>>>> Stashed changes
 .footerColor{
     background: #C3D9C8 !important;
     font-family: 'Pompiere', 'normal';
-    
 }
 
 .textoTamañoMediano{
@@ -9,8 +25,7 @@
 }
 
 .footerFontColor{
-    color:black !important;
-    
+    color:black !important;   
 }
 
 .textoTamañoGrande{

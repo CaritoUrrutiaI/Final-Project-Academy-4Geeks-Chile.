@@ -3,7 +3,11 @@ import { Link } from "react-router-dom"
 import "../../styles/footer.css"
 
 export const Footer = () => (
+<<<<<<< Updated upstream
 	<div className="fixed-botton container-fluid ">
+=======
+	<div className="fixed-bottom container-fluid">
+>>>>>>> Stashed changes
 		<div className="linea-azul-footer"></div>
 		<footer className="py-3 text-center footerColor ">
 			<div className="RR.SS pb-1">

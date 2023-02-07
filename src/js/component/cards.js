@@ -8,8 +8,29 @@ export const CentralCard = () => {
 
         <div className="card w-100 cartas alturaMin" >
             <div className="card-body">
+<<<<<<< Updated upstream
                 <h3 className="card-title text-center">Actividades</h3>
                 <p className="card-text ">Lista de actividades</p>
+=======
+
+                <div className="card-body">
+                    <div className='card-header d-flex justify-content-center'>
+                        <h5>Deportes</h5>
+                    </div>
+                    <div className="cartadeportes d-flex justify-content-between">
+                        <div>
+                            <h5 className="card-title px-4">Distancia: {localStorage.getItem("distancia")}  Km</h5>
+                            <h5 className="card-title px-4">Tiempo: {localStorage.getItem("tiempo")}  Minutos</h5>
+                        </div>
+                        <div className="me-5 mt-2 fs-2">
+                            {localStorage.getItem("emoji")}
+                        </div>
+                    </div>
+                </div>
+
+
+
+>>>>>>> Stashed changes
             </div>
         </div>
 

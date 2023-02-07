@@ -35,11 +35,114 @@ export const RegistrarActividad=()=>{
 
             <div className="row container-fluid">
 
+<<<<<<< Updated upstream
                 <div className="col-3">
                  <img src={imageSrc} width="200" className="vista"></img>
                 </div> 
             
                 <div className="col-6">
+=======
+            <div className="col-3">
+              <img src={imageSrc} width="200" className="vista"></img>
+            </div>
+    
+            <div className="col-6">
+                    <form
+                    onSubmit={(evento) => {
+                    evento.preventDefault();
+                    localStorage.setItem("distancia", evento.target.distancia.value);
+                    localStorage.setItem("tiempo", evento.target.tiempo.value); 
+                    localStorage.setItem("emoji", evento.target.emoji.value);
+                    
+                    }}>
+                    
+                    
+                    <div class="mb-3">
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Distancia Km/H"
+                        name="distancia"
+                    />
+                    </div>
+                    <div class="mb-3">
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Tiempo"
+                        name="tiempo"
+                    />
+                    </div>
+                   
+                        <div class="mb-3">
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="emoji"
+                                    id="inlineRadio1"
+                                    value="😎"
+                                />
+                                <label
+                                    class="form-check-label textoTamañoGrande"
+                                    for="inlineRadio1"
+                                >
+                                    {" "}
+                                    😎
+                                </label>
+                            </div>
+    
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="emoji"
+                                    id="inlineRadio2"
+                                    value="🙂"
+                                />
+                                <label
+                                    class="form-check-label textoTamañoGrande"
+                                    for="inlineRadio2"
+                                >
+                                    🙂
+                                </label>
+                            </div>
+    
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="emoji"
+                                    id="inlineRadio2"
+                                    value=" 😰"
+                                />
+                                <label
+                                    class="form-check-label textoTamañoGrande" for="inlineRadio2"
+                                >
+                                    😰
+                                </label>    
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="emoji"
+                                    id="inlineRadio2"
+                                    value=" 🤮"
+                                />
+                                <label
+                                    class="form-check-label textoTamañoGrande" for="inlineRadio2"
+                                >
+                                    🤮
+                                </label>    
+                            </div>
+                            <div><button type="submit">enviar</button></div>
+                            
+                        </div>
+                    </form>
+>>>>>>> Stashed changes
 
                     <div class="mb-3">
                          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Distancia Km/H"/>
