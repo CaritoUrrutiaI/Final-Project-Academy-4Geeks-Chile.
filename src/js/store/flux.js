@@ -45,7 +45,9 @@ const getState = ({
 					redirect: 'follow'
 				};
 
+ 
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us85.gitpod.io/user", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+
 					.then(response => response.json())
 					.then(result => {
 							console.log(result)
@@ -163,7 +165,9 @@ const getState = ({
 					redirect: 'follow'
 				};
 
+
 				fetch("https://3000-4geeksacade-flaskresthe-nxl0tay09lo.ws-us85.gitpod.io/signup", requestOptions) //Cambiar Ruta, dependiendo del Gitpot Backend
+
 					.then(response => response.json())
 					.then(result => {
 							console.log(result)
