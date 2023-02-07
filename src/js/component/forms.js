@@ -2,9 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/forms.css";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2"
 import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from "react-router-dom"
+
+const MySwal = withReactContent(Swal)
 
 export const LoginForm = (props) => {
 
@@ -35,6 +37,7 @@ export const LoginForm = (props) => {
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
+              navigate("/")
          }
       }}>
          <div className="container text-center d-flex justify-content-center" >
