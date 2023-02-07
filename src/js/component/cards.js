@@ -8,31 +8,35 @@ import { Link, Navigate, useParams } from "react-router-dom";
 
 
 export const CentralCard = () => {
-    
+    const{actions,store}=useContext(Context);
     return (
+        
         <div className="card w-100 cartas alturaMin" >
             <h3 className="card-title text-center">Actividades</h3>
             <h4 className="card-text ps-3">Lista de actividades</h4>
 
             <div className="card-body">
+
+                {store.actividades?.map((elem,index)=>{ 
+                  return (
                 <div className="card-body">
                     <div className='card-header d-flex justify-content-center'>
-                        <h5>{localStorage.getItem("actividad")}</h5>
+                        <h5>{elem.actividad}</h5>
                     </div>
                     <div className="cartadeportes d-flex justify-content-between">
                         <div>
 
-                            <h5 className="card-title">Distancia: {localStorage.getItem("distancia")} </h5>
-                            <h5 className="card-title">Tiempo: {localStorage.getItem("tiempo")}</h5>
+                            <h5 className="card-title px-4">Distancia: {elem.distancia} km </h5>
+                            <h5 className="card-title px-4">Tiempo: {elem.tiempo} minutos</h5>
 
-                            <h5 className="card-title px-4">Distancia: {localStorage.getItem("distancia")}  Km</h5>
 
                         </div>
                         <div className="me-5 mt-2 fs-2">
-                            {localStorage.getItem("emoji")}
+                            {elem.emocion}
                         </div>
                     </div>
                 </div>
+              )} )}
             </div>
         </div>
 
