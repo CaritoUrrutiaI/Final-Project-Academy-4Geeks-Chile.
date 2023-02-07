@@ -2,11 +2,14 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/forms.css";
-import { useForm } from "react-hook-form"
-import Swal from "sweetalert2"
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import { useNavigate } from "react-router-dom"
 
 export const LoginForm = (props) => {
+
+   const MySwal = withReactContent(Swal)
+
    let navigate = useNavigate();
    const { actions, store } = useContext(Context)
    return (
@@ -16,7 +19,7 @@ export const LoginForm = (props) => {
          let contraseña = evento.target[1].value
 
          if (Email == "" || contraseña == "") {
-            Swal.fire({
+            MySwal.fire({
                title: 'ERROR',
                text: 'Debes completar los datos',
                icon: 'error',
@@ -26,13 +29,12 @@ export const LoginForm = (props) => {
          }
          else {
             actions.login(Email, contraseña);
-            /* Swal.fire({
+            MySwal.fire({
                 title: 'FELICIDADES',
                 text: 'Inicio de sesion completado',
                 icon: 'success',
                 confirmButtonText: 'OK'
               })
-              navigate("/")*/
          }
       }}>
          <div className="container text-center d-flex justify-content-center" >
@@ -76,15 +78,15 @@ export const SignUpForm = (props) => {
          let contraseña = evento.target[4].value
          let contraseñaRepetir = evento.target[5].value
          if (contraseña != contraseñaRepetir) {
-            Swal.fire({
+            MySwal.fire({
                title: 'ERROR',
-               text: 'Las contraseñas deben ser identicas',
+               text: 'Las contraseñas deben ser idénticas',
                icon: 'error',
                confirmButtonText: 'OK'
             })
          }
          if (nameUser == "" || Email == "" || name == "" || apellido == "" || contraseña == "" || contraseñaRepetir == "") {
-            Swal.fire({
+            MySwal.fire({
                title: 'ERROR',
                text: 'Debes completar los datos',
                icon: 'error',
@@ -96,7 +98,7 @@ export const SignUpForm = (props) => {
             alert("registro completado")
             setTimeout(() => {
                if (store.email != '') {
-                  Swal.fire({
+                  MySwal.fire({
                      title: 'FELICIDADES',
                      text: 'El registro a sido completado',
                      icon: 'success',
@@ -143,12 +145,11 @@ export const SignUpForm = (props) => {
                         <input type="password" className="form-control mb-5 input-nombre" name="repetirContraseña" id="inputPassword" placeholder="Repetir Contraseña" />
                      </div>
                   </div>
-                  {/*<button type="button" className="btn btn-link text-end">¿Has olvidado tu contraseña?</button>*/}
                   <br />
                   <button href="#"
                      type="submit" className="btn btn-primary text-center" style={{ width: '277px', height: '71px', background: '#A8BA92', opacity: 0.66, boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)', borderRadius: '20px', left: '605px', top: '675px', lineHeight: '60px' }} value="Registrarse"><h3>Registrarse</h3></button>
                   <br />
-                  Ya tienes cuenta ?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Inicia sesion aqui</button></Link>
+                  Ya tienes cuenta ?<Link to={props.ruta}><button type="button" className="btn btn-link mb-1">Inicia sesión aquí</button></Link>
 
                </div>
             </div>

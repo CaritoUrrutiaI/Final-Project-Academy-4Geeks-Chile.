@@ -13,8 +13,6 @@ export const CentralCard = () => {
             <h4 className="card-text ps-3">Lista de actividades</h4>
 
             <div className="card-body">
-                <h3 className="card-title text-center">Actividades</h3>
-                <p className="card-text ">Lista de actividades</p>
                 <div className="card-body">
                     <div className='card-header d-flex justify-content-center'>
                         <h5>Deportes</h5>
