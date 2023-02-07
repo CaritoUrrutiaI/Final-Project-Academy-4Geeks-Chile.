@@ -26,7 +26,7 @@ export const RecuperarContrasena = () =>{
          }
          else{
             actions.recoverpass(Email,Apellido);
-            alert("prueba")
+            alert("Ingreso aprobado")
             navigate("/cambiarcontrasena")
          }
       }}>

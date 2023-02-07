@@ -48,7 +48,7 @@ export const RegistrarActividad = () => {
                     }}>
                     
                     
-                    <h1>cual es tu nombre?</h1>
+                    
                     <div class="mb-3">
                     <input
                         type="number"

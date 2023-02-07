@@ -20,8 +20,8 @@ export const CentralCard = () => {
                     </div>
                     <div className="cartadeportes d-flex justify-content-between">
                         <div>
-                            <h5 className="card-title">Distancia: {localStorage.getItem("distancia")}</h5>
-                            <h5 className="card-title">Tiempo: {localStorage.getItem("tiempo")}</h5>
+                            <h5 className="card-title">Distancia: {localStorage.getItem("distancia")} km</h5>
+                            <h5 className="card-title">Tiempo: {localStorage.getItem("tiempo")} horas</h5>
                         </div>
                         <div className="me-5 mt-2 fs-2">
                             {localStorage.getItem("emoji")}

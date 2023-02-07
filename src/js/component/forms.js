@@ -129,7 +129,7 @@ export const SignUpForm = (props) => {
                         <input type="text" className="form-control mb-5 input-id" name="nombre" placeholder="Nombre" />
                      </div>
                      <div className="form-group ">
-                        <input type="text" className="form-control mb-5 input-nombre" name="apellido" placeholder="Apellido" />
+                        <input type="text" className="form-control mb-5 input-nombre" name="apellido" placeholder="Respuesta Secreta" />
 
                      </div>
                   </div>
