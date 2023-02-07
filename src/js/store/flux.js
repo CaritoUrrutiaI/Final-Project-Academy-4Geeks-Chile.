@@ -53,28 +53,14 @@ const getState = ({
 					.then(result => {
 							console.log(result)
 							if (result.token) {
+								localStorage.setItem('datauser', JSON.stringify(result))
+
+								localStorage.setItem('user-token', JSON.stringify(result.token));
+
 								setStore({
 									user: result
 								})
-								alert("ingreso completado")
 								window.location.href = "/vistausuario";
-								console.log(result)
-								if (result.token) {
-									localStorage.setItem('datauser', JSON.stringify(result))
-
-									localStorage.setItem('user-token', JSON.stringify(result.token));
-
-									setStore({
-										user: result
-									})
-									alert("ingreso completado")
-									window.location.href = "/";
-								}
-								/*else {
-								alert("error")
-								console.log("error")
-							}*/
-
 							} else {
 								alert("Error: usuario no registrado")
 								console.log("error")

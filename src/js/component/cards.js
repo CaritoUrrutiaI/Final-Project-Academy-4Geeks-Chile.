@@ -16,6 +16,7 @@ export const CentralCard = () => {
             <h4 className="card-text ps-3">Lista de actividades</h4>
 
             <div className="card-body">
+
                 {store.actividades?.map((elem,index)=>{ 
                   return (
                 <div className="card-body">
@@ -25,8 +26,8 @@ export const CentralCard = () => {
                     <div className="cartadeportes d-flex justify-content-between">
                         <div>
 
-                            <h5 className="card-title">Distancia: {elem.distancia} km </h5>
-                            <h5 className="card-title">Tiempo: {elem.tiempo} minutos</h5>
+                            <h5 className="card-title px-4">Distancia: {elem.distancia} km </h5>
+                            <h5 className="card-title px-4">Tiempo: {elem.tiempo} minutos</h5>
 
 
                         </div>
