@@ -1,15 +1,18 @@
-import React from "react";
+import React,{useContext, useState} from "react";
 import { useParams } from "react-router-dom";
 import bike from "../../img/image 11.png";
 import running from "../../img/image 12.png";
 import hike from "../../img/image 13.png";
 import swim from "../../img/image 14.png";
+import { useNavigate } from "react-router-dom"
 
 import "../../styles/entrenamientos.css";
+import { Context } from "../store/appContext";
 
 export const RegistrarActividad = () => {
   const { actividad } = useParams();
-  
+   const {store,actions}=useContext(Context);
+  const navigate = useNavigate()
 
   let imageSrc;
   switch (actividad) {
@@ -41,11 +44,17 @@ export const RegistrarActividad = () => {
                     <form
                     onSubmit={(evento) => {
                     evento.preventDefault();
+                    actions.addActividad(
+                        actividad,evento.target.distancia.value,
+                        evento.target.tiempo.value,
+                        evento.target.emoji.value                     
+                    )
                     localStorage.setItem("distancia", evento.target.distancia.value);
                     localStorage.setItem("tiempo", evento.target.tiempo.value); 
                     localStorage.setItem("emoji", evento.target.emoji.value);
                     localStorage.setItem("actividad", actividad);
-
+                    alert("completado")
+                    navigate("/vistausuario")
                     
                     }}>
                     <div class="mb-3">

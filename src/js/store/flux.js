@@ -11,6 +11,7 @@ const getState = ({
 			recetasFav: [],
 			datosReceta: null,
 			todo: [],
+			actividades:[],
 			demo: [{
 					title: "FIRST",
 					background: "white",
@@ -247,6 +248,19 @@ const getState = ({
 						todo: [registro]
 					})
 			},
+			addActividad: (actividad, distancia, tiempo, emoji) => {
+				const store = getStore();
+				store.actividades.length === 0 ?
+				
+				  setStore({
+					actividades: [{ actividad:actividad, distancia:distancia, tiempo:tiempo, emocion:emoji }]
+				  }) :
+				  setStore({
+					actividades: [...store.actividades, { actividad:actividad, distancia:distancia, tiempo:tiempo, emocion:emoji }]
+				  });
+				  console.log(getStore())
+			  },
+			  
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
