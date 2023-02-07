@@ -32,7 +32,6 @@ export const RegistrarActividad = () => {
         <div className="text-center">
           <h1> Registro de actividad: {actividad} </h1>
             <div className="row container-fluid">
-
             <div className="col-3">
               <img src={imageSrc} width="200" className="vista"></img>
             </div>
@@ -46,9 +45,6 @@ export const RegistrarActividad = () => {
                     localStorage.setItem("emoji", evento.target.emoji.value);
                     
                     }}>
-                    
-                    
-                    
                     <div class="mb-3">
                     <input
                         type="number"
