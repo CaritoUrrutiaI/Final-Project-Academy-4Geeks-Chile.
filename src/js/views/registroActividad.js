@@ -9,6 +9,7 @@ import "../../styles/entrenamientos.css";
 
 export const RegistrarActividad = () => {
   const { actividad } = useParams();
+  
 
   let imageSrc;
   switch (actividad) {

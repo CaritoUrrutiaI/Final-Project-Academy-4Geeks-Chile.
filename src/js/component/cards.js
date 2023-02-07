@@ -1,12 +1,14 @@
 
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import '../../styles/cards.css'
 import { Context } from '../store/appContext'
 import '../../styles/cartadeportes.css'
 import '../../styles/output.css'
 import { Link, Navigate, useParams } from "react-router-dom";
 
+
 export const CentralCard = () => {
+    
     return (
         <div className="card w-100 cartas alturaMin" >
             <h3 className="card-title text-center">Actividades</h3>
@@ -36,6 +38,7 @@ export const CentralCard = () => {
 
     )
 }
+
 
 export const FotoCard = () => {
     const { store, actions } = useContext(Context);
