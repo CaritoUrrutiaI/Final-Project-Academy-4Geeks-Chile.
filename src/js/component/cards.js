@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react'
 import '../../styles/cards.css'
 import { Context } from '../store/appContext'
 import '../../styles/cartadeportes.css'
+import '../../styles/output.css'
 import { Link, Navigate, useParams } from "react-router-dom";
 
 export const CentralCard = () => {
@@ -39,10 +40,53 @@ export const CentralCard = () => {
 export const FotoCard = () => {
     const { store, actions } = useContext(Context);
     const dataUser = JSON.parse(localStorage.getItem("datauser"));
+    const input = document.querySelector("input");
+    const output = document.querySelector("output");
+    let imagesArray = [];
+    input?.addEventListener("change",function(){
+        const file = input.files
+        if(imagesArray.length === 0){
+        imagesArray.push(file[0])
+        displayImages()
+        localStorage.setItem("imagen",JSON.stringify(imagesArray))
+    }else {
+        alert("solo puedes subir una imagen")
+    }
+    })
+    /*const storedImages = JSON.parse(localStorage.getItem("imagen"));
+    if(storedImages){
+        imagesArray = storedImages;
+        displayImages()
+    }*/
+    function displayImages(){
+        let images = "" 
+        imagesArray.forEach((image,index)=>{
+            images += `<div class="image">
+            <img src="${URL.createObjectURL(image)}" alt="image">
+            <span onclick="deleteImage(${index})">&times;</span>
+          </div>`
+        })
+        output.innerHTML = images
+
+    }
+    const deleteImage = (index)=> {
+        imagesArray.splice(index, 1)
+        displayImages()
+      }
     return (
 
         <div className="card w-100 cartas" >
-            <img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle mx-auto position-absolute top-0 start-50 translate-middle imagenPerfil" alt="Imagen Perfil" />
+            {/*<img src="https://cdn-icons-png.flaticon.com/512/6073/6073873.png" className="card-img-top rounded-circle mx-auto position-absolute top-0 start-50 translate-middle imagenPerfil" alt="Imagen Perfil" /> */}
+           {/* <input  className= "" type="file" accept="image/jpeg, image/png, image/jpg" placeholder=''/>*/}
+            <div className="input-group mb-3">
+                  
+              <input type="file" className="form-control" id="inputGroupFile01" style={{display: 'none'}}/>
+              <label htmlFor="inputGroupFile01" className="btn btn-success">Sube tu Foto</label>
+           </div>
+           
+                <output></output>
+               { /* <span onClick={() => deleteImage(index)}>&times;</span>*/}
+   
             <div className="card-body pt-5 mt-5">
                 <h3 className="card-title text-center">{dataUser != null ? dataUser.info_user?.username.toUpperCase() : "Nombre de Usuario"}</h3>
                 <h3 className="card-text text-center">{dataUser != null ? dataUser.info_user?.email : "Email"}</h3>
